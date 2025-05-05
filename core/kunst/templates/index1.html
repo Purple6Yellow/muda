@@ -1,0 +1,61 @@
+{% extends 'basis.html' %}
+{% load static %}
+
+<!--head-->
+{% block head %}
+<style>
+.test{background-color:yellow;}   
+.closed{width: 2px;height: 2px;}
+.open{width:200px;height: 200px;}
+
+
+</style>
+{% endblock %}
+<!--//head-->
+
+<!--section-->
+{% block section1 %}
+    sdfdgasdgas
+    <div class = 'test closed'></div>
+
+{% endblock %}
+<!--//section-->
+
+<!--section-->
+{% block section2 %}
+
+    {% for kunst in kunst_list %}
+
+        Titel = {{ kunst.titel }} 
+        Foto = {{ kunst.afbeeld }} 
+        afbeeldingscontext  = {{ kunst.afbeeld_name }} 
+
+    {% endfor %}
+
+{% endblock %}
+<!--//section-->
+
+{% block extrascript %}
+
+<script>
+    $(document).ready(function(){
+        $('#menu').on('click', function(event){
+            alert ('animate werkend- baseweb')
+            $('.test').slideToggle();
+            event.stopPropagation();
+            if (!$(".test").hasClass("open")) {
+                $(".content").slideDown().addClass("open"); // Blijft open
+            };
+        });
+        $(document).click(function(){
+            $('.test').slideUp();
+        });
+        $('.test').on('click', function(event){
+            event.stopPropagation(); //Zorgt dat het niet sluit bij klikken op 
+        })
+    
+    });
+</script>
+{% endblock %}
+
+

@@ -1,0 +1,26 @@
+
+@media only screen and (min-device-width: 899px){
+
+/*--LAPTOP ALGEMEEN------------------------Laptop---------------------------------------------------------------*/
+.verbergenLap{display:none;}
+.verbergenMob{display:inline-block;}
+/*----*/
+body{font-size:20px;line-height: 1.4;}
+.font-20B{font-size: 36px; font-weight: 500;} 
+
+
+/*--// LAPTOP ALGEMEEN---------------------Laptop-----------------------------------------------------------------*/
+
+/*---BASIS-----laptop----------------------------------------------------------------------------*/
+
+*{box-sizing: border-box;}
+ .menuboven {background-color:inherit;}
+ .menu-container{background-color:inherit;width:50%;margin: 2% 0 0 50%;}
+ .menu-container li{list-style-type: none;font-size:30px;}
+ .menu-container a{text-decoration: none;}
+ .menu{background-color: inherit;margin: 2% 2% 2% 2%;}
+ #menu-container{background-color:inherit;display:flex;overflow:auto;flex-direction: row; width:100%;margin: 0 0 0 0%;}   
+
+/*---// BASIS---laptop----------------------------------------------------------------------------*/
+
+}

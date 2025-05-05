@@ -1,0 +1,39 @@
+{% extends 'basis.html' %}
+{% load static %}
+
+<!--CSS style-->
+{% block head %}
+<style>
+    li{list-style-type: none; font-size:30px; text-align: center;padding: 10% 0 0% 0%;}
+    .menuMobiel{display:hide;background-color:#A87544;width: 100%; margin: 10% 0 0 0;}
+    a{ color:inherit; }
+</style>
+{% endblock %}
+<!--CSS style-->
+
+{% block menu %}
+{% endblock %}
+
+{% block section %}
+
+<div class = "menuMobiel" id = "menuMobiel">
+    <ul> 
+        <li> <a href = "/index.html"> Home </a></li>
+        <li> <a href = "/kunst.html"> Art </a></li>
+        <li> <a href = "index.html"> Decoratie </a></li>
+        <li> <a href = "index.html"> CV </a></li>
+        <li> <a href = "index.html"> Aan het werk </a></li>
+        <li> <a href = "index.html"> Contact </a></li>
+    </ul>
+</div>
+
+<script src="{% static 'js/eigenontwerp/menu.js' %}" type = "text/javascript" ></script>
+ <script>
+
+
+ </script>
+
+{% endblock %}
+
+{% block footer%}
+{% endblock %}

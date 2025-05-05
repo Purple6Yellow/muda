@@ -1,0 +1,34 @@
+@media only screen and (min-device-width: 150px){
+
+/* --- ALGEMEEN -----------------------------------------------------------------------------------*/
+.menuMobiel{display:none;} /*javascript menubalk*/
+
+.sectionblock0{background-color:inherit;width:100%; height:100%;clip-path: inset(0% 0% round 20px);}
+.bannerblock{background-color: #B1624F;;width:100%;width:100%; height:100px;clip-path: inset(0% 0% round 20px);}
+.banner_txtblock{width:40%;position:relative;opacity: 50%;top:0px;transform:translate(140%,-200%);z-index:20;font-size:22px;text-align: center;}
+.menublock{width:100%; height:100px;position:absolute;top:0%;right:0px;}
+.headerblock{background-color:inherit;width:100%; height:100%;clip-path: inset(0% 0% round 20px);}
+.sectionblock1{background-color:#888A82;width:100%; height:100%;margin-top:1%;clip-path: inset(0% 0% round 20px);}
+.sectionblock2{background-color: #48534D;width:100%; height:100%;margin-top:1%;clip-path: inset(0% 0% round 20px);position:relative;}
+.sectionblock3{background-color:#48534D;width:100%; height:100%;margin-top:1%;clip-path: inset(0% 0% round 20px);}
+.sectionblock4{background-color: #C1B8A6;width:100%; height:100%;margin-top:1%;clip-path: inset(0% 0% round 20px);}
+.footerblock{background-color:#f5f5dc;width:100%; height:100%;margin-top:1%;clip-path: inset(0% 0% round 20px);}
+        
+
+body{background-color:#f5f5dc; font-family: "Gill Sans", "Gill Sans MT", "Calibri", Arial, "Helvetica", sans-serif;}
+a{color:#888A82;text-decoration:none;}
+button a{color:#2B3E4F;text-decoration: none;}
+a:hover, button a:hover{color:#A87544;}
+.menu a {color:#f5f5dc;}
+.menu a:hover{color:#48534D;}
+.TxtCenter{text-align: center;}
+/* // --- ALGEMEEN ------------------------------------------------------------------------------- */
+
+/*---BASIS-------mobiel----------------------------------------------------------------------------*/
+.menu-container img{width:7%;margin: 0 0 0 70%;} /*hamburger menu-icoon */
+.verbergenMob{display:none;}
+
+/*---// BASIS---------------------------------------------------------------------------------------*/
+
+
+}

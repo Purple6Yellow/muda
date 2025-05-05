@@ -1,0 +1,157 @@
+{% extends 'basis.html' %}
+{% load static %}
+
+{% block head %}
+{% endblock %}
+{% block styles %} 
+<style>
+.container3{width:25%;background-color:yellow;}
+.container{display:flex;flex-wrap:wrap;gap:1rem;}
+.item{flex:1 1 calc(25% - 1rem);box-sizing:border-box;background:#ddd;padding:1rem;text-align: center;
+        width:100px;height:100px;clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
+
+.vorm_rand3{flex: 1 1 calc(25%-1rem );box-sizing:border-box; background: #ddd; padding: 1rem; text-align:center;background-color: #c5a643; width:200px; height: 200px;
+clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
+
+.vorm_rand{background-color: #c5a643; width:100px; height: 100px; padding: 1% 1% 1% 1%;
+clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
+
+.vorm{background-color:red; width:100%; height: 100%;margin:0% 0 0 0%;
+        clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
+.vorm img{width:100%;}
+
+.horizontaal1{display: flex;flex-wrap: wrap;gap:1rem;width:100%;}
+
+.horizontaal{display:grid;grid-template-rows:repeat(4,60px 60px 60px 60px);background-color:inherit;}
+.horizontaal1{display:flex;flex-direction: row;}
+.horizontaal{display:grid;grid-template-columns: fit-content (40%); box-sizing: border-box;height:200px; width:100%; background-color:aqua;padding:10px;}
+.horizontaal div{background-color: yellow;padding:5px;}
+</style>
+{% endblock %} 
+
+<!----------SECTION4----->
+{% block section1 %}
+<!---->
+{% for kunst in kunst_list %}
+<div class="horizontaal">
+        <div class = "vorm_rand">
+                <div class = "vorm"> 
+                        <img src="{{ kunst.afbeeld.url }}">
+                </div>
+        </div>
+</div>
+{% endfor %}
+<!---->
+{% endblock %}
+<!--//section-->
+
+<!----------SECTION2----->
+{% block section2 %}
+<!---->
+<div class="grid grid-cols-4 gap-6">
+        {% for kunst in kunst_list %}
+                <div class="bg-purple-500 h-40 flex items-center justify-center text-white font-bold rounded-lg shadow-lg">
+                {{ kunst.titel }}
+                </div>
+        {% endfor %}
+</div>
+<!---->
+{% endblock %}
+<!--//section-->
+
+<!----------SECTION2----->
+{% block section3 %}
+<!---->
+<div class="grid grid-cols-4 gap-6">
+        {% for kunst in kunst_list %}
+                <div class="bg-purple-500 h-40 flex items-center justify-center text-white font-bold rounded-lg shadow-lg">
+                {{ kunst.titel }}
+                </div>
+        {% endfor %}
+</div>
+<!---->
+{% endblock %}
+<!--//section-->
+
+
+
+<!----------SECTION4----->
+{% block section5 %}
+<!---->
+
+{% for kunst in kunst_list %}
+<div style="display:flex;flex-wrap: wrap-reverse; gap: 1em;">
+{{ kunst.titel}}
+</div>
+{% endfor %}
+
+<!---->
+{% endblock %}
+<!--//section-->
+
+
+
+<!----------SECTION4----->
+{% block section4 %}
+<!---->
+
+{% for kunst in kunst_list %}
+<div style="gap:2px; background-color:yellow; justify-content: center; display:grid;grid-template-columns:repeat(4,6px);background-color:inherit;"> 
+{{ kunst.titel}}
+</div>
+{% endfor %}
+
+<!---->
+{% endblock %}
+<!--//section-->
+
+
+<!--section11-->
+{% block section11 %}
+{% for kunst in kunst_list %}
+
+<div class="horizontaal">
+        <div> Yes </div>
+</div>
+
+{% endfor %}
+{% endblock %}
+<!--//section-->
+
+
+
+<!--section1-->
+{% block section30 %}
+{% for kunst in kunst_list %}
+
+<div style = "flex-direction:row;width:100px;height:100px;clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);border: 0px solid red;">
+        <img style = "width:100%;" src="{{ kunst.afbeeld.url }}"></div>
+
+
+{% endfor %}
+{% endblock %}
+<!--//section-->
+
+
+<!--section1-->
+{% block section12 %}
+
+        {% for kunst in kunst_list %}
+        <div class = "container">
+                <div class = "item">
+                        <img src="{{ kunst.afbeeld.url }}">
+                </div>
+        </div>
+
+        {% endfor %}
+{% endblock %}
+<!--//section-->
+
+
+<!--section1-->
+{% block section13 %}
+<div class="container" style = "clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); height:100px;">   </div> 
+{% endblock %}
+<!--//section-->
+
+<div class="width:10px;background-color:yellow;border:2px solid black;"> {{kunst.titel}}</div>

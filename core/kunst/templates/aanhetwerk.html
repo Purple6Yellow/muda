@@ -1,0 +1,17 @@
+
+
+
+<!----------SECTION3----->
+{% block section3 %}
+
+<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+    {% for product in products %}
+        <div style="background-color: purple; height: 100px; display: flex; align-items: center; justify-content: center;">
+            {{ product.titel }}
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
+<!--//------SECTION3----->
+

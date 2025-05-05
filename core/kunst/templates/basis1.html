@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="nl">
+{% load static %} 
+<!--HEAD--->
+<head>
+        <title> Marie Louise Art & Decor </title>
+        <meta charset = "utf-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" type="text/css" media = "screen" href = "{% static 'css/cssMobiel.css' %}">
+        <link rel="stylesheet" type="text/css" media = "screen" href = "{% static 'css/cssLaptop.css' %}">  
+                
+        <!-- Javascript-->
+        <script src = "{% static 'js/jquery.js' %}" type= "text/javascript";></script>
+        <!-- //Javascript-->
+         
+        <!-------CSS---------------------------->
+        <style>
+
+/*--ALGEMEEN - Zelfde overal -------mobiel---------------------------------------------------------*/
+body{background-color:#F0EDDB;} /* licht grijs */ 
+ a {color:#773422; text-decoration: none;}/* puur rood */ 
+ .menu-container a:hover {color: #E5D0BC; }/*zacht rood*/ 
+
+.section1,.section2,.section3,.section4{width:95%;height:100%; clip-path: inset(0 round 50px);margin: 2% 2% 2% 2%;}
+.section1{background-color:#E5D0BC;}
+.section2{background-color:#773422;}
+.section3{background-color:#AB9F8D;}
+.section4{background-color:#888A82;}
+/*--// ALGEMEEN - Zelfde overal -------mobiel------------------------------------------------------*/
+
+/*--ALGEMEEN------------------------------------Laptop---------------------------------------------*/
+.verbergenLap{display:none;}
+/*--// ALGEMEEN------------------------------------Laptop------------------------------------------*/
+
+/*------------------------------MENU-------Laptop---------------------------------------------*/
+*{box-sizing: border-box;}
+.menuboven {background-color:inherit;}
+.menu-container{background-color:inherit;width:50%;margin: 2% 0 0 50%;}
+.menu-container li{list-style-type: none;font-size:30px;}
+.menu-container a{text-decoration: none;}
+.menu{background-color: inherit;margin: 2% 2% 2% 2%;}
+#menu-container{background-color:inherit;display:flex;overflow:auto;flex-direction: row; width:100%;margin: 0 0 0 0%;}  
+
+/*------------------------------MENU > EINDE---------------------------------------------------*/
+
+    
+
+
+        </style>
+        <!-------// CSS---------------------------->
+        <!-------Django head ---------------------->
+        {% block head %}
+        {% endblock %}
+        <!-------// Django head ---------------------->
+</head>
+<!------------------------------------>  
+<body>
+
+{% block menu %}
+<header class = "row">
+        <div class="col-12 menuboven">   
+                <div class= "menu-container">
+                <ul id = "menu-container" class="menu">
+                        <li id="menu"  class = "verbergenLap"> <a href = "/index.html"><img src="{% static 'img/menulogo.png' %}" alt="logo">  </a> </li>
+
+                        <li class = "menu verbergenMob"> <a href="/index.html">Home</a></li>
+                        <li class = "menu verbergenMob"> <a href="/kunst.html">Art</a> </li>
+                        <li class = "menu verbergenMob"> <a href= "/decoratie.html" > Decoratie</a></li> 
+                        <li class = "menu verbergenMob"> <a href="/bkagenda/ateliers.html" > CV</a></li> 
+                        <li class = "menu verbergenMob"> <a href="/bkagenda/ateliers.html" > Aan het werk</a></li> 
+                        <li class = "menu verbergenMob"> <a href="/contact.html">Contact</a></li>
+                </ul>
+                </div>
+        </div>
+</header>
+{% endblock %}
+
+<section>
+        <div class = "">
+                {% block section0 %}
+           
+                {% endblock %}
+        </div>
+
+
+
+        <div class = "section1">
+                {% block section1 %}
+           
+                {% endblock %}
+        </div>
+
+        <div class = "section2">
+                {% block section2 %}
+                {% endblock %}
+        </div>
+
+        <div class = "section3">
+                {% block section3 %}
+                {% endblock %}
+        </div>
+
+        <div class = "section4">
+                {% block section4 %}
+                {% endblock %}
+        </div>
+</section>
+
+<section>
+        {% block extrascript %}
+        {% endblock %}
+</section>
+
+<footer>
+        {% block footer %}
+        {% endblock %}
+</footer>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+{% extends 'basis.html' %}
+{% load static %}
+<!--head-->
+{% block head %}
+<style>
+.vorm_rand{background-color: #c5a643; width:100px; height: 100px; padding: 1% 1% 1% 1%;
+clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
+
+.vorm{background-color:red; width:100%; height: 100%;margin:0% 0 0 0%;
+        clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
+.vorm img{width:100%;}
+</style>
+{% endblock %}
+<!--//head-->
+
+
+<!----------SECTION----->
+{% block section11 %}
+
+<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 80px;">
+    {% for deco in decos %}
+    <div class = "afbeelding&titel">
+        <div style="background-color: #c5a643; height: 300px;width:300px; display: flex; align-items: center; justify-content: center;clip-path:ellipse(25% 40% at 50% 50%); margin: 5% 5% 5% 5%;">
+        
+            <div style="height:290px; width:290px;clip-path:ellipse(25% 40% at 50% 50%);"> 
+                <img style="width: 100% " src="{{ deco.afbeeld.url }}" alt="in construction">
+           
+            </div>
+        </div>
+        <div style="margin-top: 8px; font-weight: bold; text-align: center;">{{ deco.titel }}</div>
+    </div>
+  
+    {% endfor %}
+{% endblock %}
+<!--//------SECTION3----->
