@@ -9,6 +9,9 @@ clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
 .vorm{background-color:red; width:100%; height: 100%;margin:0% 0 0 0%;
         clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
 .vorm img{width:100%;}
+
+
+.kunst_alge{display: grid; grid-template-columns: repeat(4, 1fr); gap: 80px;}
 </style>
 {% endblock %}
 <!--//head-->
@@ -17,9 +20,39 @@ clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
 
 <!----------SECTION----->
 {% block section11 %}
-
+<!---->
+<div class = 'row'>
+    <div class="font-20B TxtCenter Margin"> Kunstwerken Marlous Muda </div>
+</div>
+<!---->
 <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 80px;">
     {% for kunst in kunsts %}
+
+    <div class = "afbeelding&titel">
+        <div style="background-color: #c5a643; height: 300px;width:300px; display: flex; align-items: center; justify-content: center;clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); margin: 5% 5% 5% 5%;">
+            <div style="height:290px; width:290px;clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);"> 
+               <a href="/kunst_detail.html/{{ kunst.pk }}"> <img style="width: 100% " src="{{ kunst.afbeeld.url }}" alt="in construction"> </a>
+               <a href="{% url 'KunstDetail' kunst.pk %}" TARGET = "_blank"> <img style="width: 100% " src="{{ kunst.afbeeld.url }}" alt="in construction"> </a>
+            </div>
+        </div>
+        <div style="margin-top: 8px; font-weight: bold; text-align: center;">{{ kunst.titel }}</div>
+    </div>
+    {% endfor %}
+</div>
+ {% endblock %}
+<!---->
+
+
+<!----------SECTION----->
+{% block section12 %}
+<!---->
+<div class = 'row'>
+    <div> Kunstwerken Marlous Muda </div>
+</div>
+<!---->
+<div class = "kunst_alge">
+    {% for kunst in kunsts %}
+
     <div class = "afbeelding&titel">
         <div style="background-color: #c5a643; height: 300px;width:300px; display: flex; align-items: center; justify-content: center;clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); margin: 5% 5% 5% 5%;">
             <div style="height:290px; width:290px;clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);"> 
@@ -29,22 +62,14 @@ clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
         <div style="margin-top: 8px; font-weight: bold; text-align: center;">{{ kunst.titel }}</div>
     </div>
     {% endfor %}
-{% endblock %}
+</div>
+ {% endblock %}
+<!---->
+
+
+
+
+
 <!--//------SECTION----->
-
-<!----------SECTION----->
-{% block section12 %}
-
 <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 80px;">
-    {% for kunst in kunsts %}
-    <div class = "afbeelding&titel">
-        <div style="background-color: inherit; height: auto;width:auto; display: flex; align-items: center; justify-content: center;clip-path: inset(0 0 round 20px); margin: 5% 5% 5% 5%;">
-            <div> 
-                <img style="width: 100% " src="{{ kunst.afbeeld.url }}" alt="in construction">
-            </div>
-        </div>
-        <div style="margin-top: 8px; font-weight: bold; text-align: center;">{{ kunst.titel }}</div>
-    </div>
-    {% endfor %}
-{% endblock %}
-<!--//------SECTION----->
+

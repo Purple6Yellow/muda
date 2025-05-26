@@ -1,18 +1,31 @@
 
 @media only screen and (min-device-width: 899px){
-
-/*--LAPTOP ALGEMEEN------------------------Laptop---------------------------------------------------------------*/
+/*--ALGEMEEN ---------------laptop--------------------------------------------------------------------*/
+/*--LETTER--*/
+.banner_txtblock{font-size:22px;text-align: center;}
+body{font-size:20px;line-height: 1.4;}
+.font-20B{font-size: 36px; font-weight: 600;} 
+/*--//LETTER--*/
+/*--DIVERS--*/
+/*--*/
 .verbergenLap{display:none;}
 .verbergenMob{display:inline-block;}
-/*----*/
-body{font-size:20px;line-height: 1.4;}
-.font-20B{font-size: 36px; font-weight: 500;} 
-
-
-/*--// LAPTOP ALGEMEEN---------------------Laptop-----------------------------------------------------------------*/
-
-/*---BASIS-----laptop----------------------------------------------------------------------------*/
-
+.row{display:inline-block;width:100%;background-color:inherit;}    
+[class*="col-"]{float:left}
+.col-4{width:33.33%;}
+.col-6{width:50%;background-color:inherit;}
+.col-12{width:100%;}
+.col-30{width:30%;}
+.col-40{width:40%;}
+iframe{width: 100%;height:400px;}
+/*--//DIVERS--*/
+/*--//ALGEMEEN -----------------------------------------------------------------------------------*/
+/*--BASIS-----------------------------------------------------------------------------------------*/
+.bannerblock{height: 100px;}
+.banner_txtblock{width:40%;
+    position:relative; opacity: 50%; top:0px;transform:translate(140%,-200%);z-index:20;}
+.menublock{height:100px;width:100%; position:absolute;top:0%;right:0px;}
+/*--*/
 *{box-sizing: border-box;}
  .menuboven {background-color:inherit;}
  .menu-container{background-color:inherit;width:50%;margin: 2% 0 0 50%;}
@@ -20,7 +33,12 @@ body{font-size:20px;line-height: 1.4;}
  .menu-container a{text-decoration: none;}
  .menu{background-color: inherit;margin: 2% 2% 2% 2%;}
  #menu-container{background-color:inherit;display:flex;overflow:auto;flex-direction: row; width:100%;margin: 0 0 0 0%;}   
+/*--//BASIS---------------------------------------------------------------------------------------*/
 
-/*---// BASIS---laptop----------------------------------------------------------------------------*/
 
-}
+/*--VOLGORDE-------------------------------------------------------------------------------------*/
+/* ALGEMEEN > BASIS >
+
+/*--//VOLGORDE-----------------------------------------------------------------------------------*/
+
+

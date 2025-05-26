@@ -1,0 +1,37 @@
+{% extends 'basis.html' %}
+{% load static %}
+<!--head-->
+{% block head %}
+<style>
+.detail{background-color:green;}
+
+.afbeeld{height:300px; background-color:green; z-index:100;}
+.afbeeld img {width:100%;clip-path:inset(0 0 round 20px);}
+</style>
+{% endblock %}
+<!--//head-->
+<!-------------------------------------------------------------------------------------------BODY-->
+
+<!----------SECTION----->
+{% block section11 %}
+<!---->
+<div class = 'row'>
+    <div class="font-20B TxtCenter Margin">   {{ kunst.titel}} </div>
+</div>
+<!---->
+<div class = "row">
+     <div class = "col-30"> 
+            Hier komt een tekst toelichting te staan.
+        </div>
+
+       <div class = "col-30 afbeeld">
+            <img style="width:100%; align-items: center; justify-content: center;padding:1% 1% 1% 1%; clip-path:inset(0% 0% round 20px);" src="{{ kunst.afbeeld.url }}" alt="in construction"> 
+        </div>
+
+        <div class = "col-30"> 
+            Hier komt een tekst toelichting te staan.
+        </div>
+</div>
+<!---->
+{% endblock %}
+<!--//------SECTION----->
