@@ -4,22 +4,19 @@
 {% block styles %}
 <style>
 
-/*----*/    
-.row{width:100%;display:inline-block;}
-[class*="col-"]{padding:0%;float:left;}
-.col-4{width:33.33%;}
-.col-6{width:50%;}
-.col-12{width:100%;}
-/*----*/
-
-
 </style>
 {% endblock %}
 <!--// head-->
 
 <!-----------------------------------------BODY------------------------------>
+
 <!----------HEADER----->
-{% block header %}{% endblock header %}
+{% block header %}
+<div class = "row">
+    <div class="headertitel"> Kunst & Decoratie Marlous Muda </div>
+    <div class="headertekst"></div>
+</div>
+{% endblock header %}
 <!-----//---HEADER----->
 
 <!----------SECTION1----->
@@ -35,15 +32,12 @@
  
         </div>
     </div>
- 
-
 {% endfor %}
 {% endblock %}
 <!-----//---SECTION----->
 
 <!----------SECTION1----->
 {% block section2 %}
-
     <div class = "row"> 
         <div class = "col-6" style=" background-color: inherit;align-items: center; justify-content: center;padding:10% 1% 1% 10%;">
             <div> Hier zou je je laatste activiteiten kunnen plaatsen</div>
@@ -52,7 +46,5 @@
         <div class = "col-6" style=" background-color: inherit;">
         </div>
     </div>
- 
-
 {% endblock %}
 <!-----//---SECTION----->

@@ -9,27 +9,62 @@ clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
 .vorm{background-color:red; width:100%; height: 100%;margin:0% 0 0 0%;
         clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
 .vorm img{width:100%;}
+
+
+.kunst_alge{display: grid; grid-template-columns: repeat(4, 1fr); gap: 80px;}
+
+.Grid{display:grid; grid-template-columns:repeat(4, 1fr);gap:80px;}
+.green{background-color:green;}
 </style>
 {% endblock %}
 <!--//head-->
-
-
+<!-----------------------------------------BODY------------------------------>
+<!----------HEADER----->
+{% block header %}
+<div class = "row">
+    <div class="headertitel"> Decoratie & Renovatie </div>
+    <div class="headertekst"> { decor.titel } </div>
+</div>
+{% endblock header %}
+<!-----//---HEADER----->
 <!----------SECTION----->
 {% block section11 %}
+<div class = "Grid green">
 
+    {% for decor in decors %}
+        {{ decor.titel }}
+    {% endfor %}
+
+</div>
+ {% endblock %}
+<!---->
+<!--//------SECTION----->
+<!----------SECTION----->
+{% block section10 %}
+<!---->
+<div class = 'row'>
+    <div class="font-20B TxtCenter Margin"> Kunstwerken Marlous Muda </div>
+</div>
+<!---->
 <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 80px;">
-    {% for deco in decos %}
+    {% for kunst in kunsts %}
+
+    {{ decor.titel }}
+
     <div class = "afbeelding&titel">
-        <div style="background-color: #c5a643; height: 300px;width:300px; display: flex; align-items: center; justify-content: center;clip-path:ellipse(25% 40% at 50% 50%); margin: 5% 5% 5% 5%;">
-        
-            <div style="height:290px; width:290px;clip-path:ellipse(25% 40% at 50% 50%);"> 
-                <img style="width: 100% " src="{{ deco.afbeeld.url }}" alt="in construction">
-           
+        <div style="background-color: #c5a643; height: 300px;width:300px; display: flex; align-items: center; justify-content: center;clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); margin: 5% 5% 5% 5%;">
+            <div style="height:290px; width:290px;clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);"> 
+               <a href="/kunst_detail.html/{{ kunst.pk }}"> <img style="width: 100% " src="{{ kunst.afbeeld.url }}" alt="in construction"> </a>
+               <a href="{% url 'KunstDetail' kunst.pk %}" TARGET = "_blank"> <img style="width: 100% " src="{{ kunst.afbeeld.url }}" alt="in construction"> </a>
             </div>
         </div>
-        <div style="margin-top: 8px; font-weight: bold; text-align: center;">{{ deco.titel }}</div>
+        <div style="margin-top: 8px; font-weight: bold; text-align: center;">{{ kunst.titel }}</div>
     </div>
-  
     {% endfor %}
-{% endblock %}
-<!--//------SECTION3----->
+</div>
+ {% endblock %}
+<!---->
+<!--//------SECTION----->
+
+
+

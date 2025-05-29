@@ -11,3 +11,12 @@ class Kunst (models.Model):
 
     def __str__(self):
         return f"{self.titel} -- {self.created_by}"
+### //Kunst
+
+### Decor
+class Decor (models.Model):
+    titel = models.CharField(max_length=200)
+    afbeeld = models.ImageField(upload_to='images/', null = True, blank = True)
+
+    def __str__(self):
+        return f"{self.titel}"

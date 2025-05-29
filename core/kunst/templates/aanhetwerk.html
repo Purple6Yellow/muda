@@ -1,17 +1,40 @@
+{% extends 'basis.html' %}
+{% load static %}
+<!--head-->
+{% block head %}
+<style>
+</style>
+{% endblock %}
+<!--//head-->
+<!-----------------------------------------BODY------------------------------>
+<!----------HEADER----->
+{% block header %}
+<div class = "row">
+    <div class="headertitel"> Aan het werk </div>
+    <div class="headertekst"></div>
+</div>
+{% endblock header %}
+<!-----//---HEADER----->
 
 
+<!----------SECTION----->
+{% block section11 %}
+<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 80px;">
+    {% for kunst in kunsts %}
 
-<!----------SECTION3----->
-{% block section3 %}
-
-<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
-    {% for product in products %}
-        <div style="background-color: purple; height: 100px; display: flex; align-items: center; justify-content: center;">
-            {{ product.titel }}
+    <div class = "afbeelding&titel">
+        <div style="background-color: #c5a643; height: 300px;width:300px; display: flex; align-items: center; justify-content: center;clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); margin: 5% 5% 5% 5%;">
+            <div style="height:290px; width:290px;clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);"> 
+               <a href="/kunst_detail.html/{{ kunst.pk }}"> <img style="width: 100% " src="{{ kunst.afbeeld.url }}" alt="in construction"> </a>
+               <a href="{% url 'KunstDetail' kunst.pk %}" TARGET = "_blank"> <img style="width: 100% " src="{{ kunst.afbeeld.url }}" alt="in construction"> </a>
+            </div>
         </div>
+        <div style="margin-top: 8px; font-weight: bold; text-align: center;">{{ kunst.titel }}</div>
+    </div>
     {% endfor %}
 </div>
+ {% endblock %}
+<!---->
+<!--//------SECTION----->
 
-{% endblock %}
-<!--//------SECTION3----->
 

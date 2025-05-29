@@ -1,0 +1,40 @@
+
+
+
+<!----------SECTION3----->
+{% block section3 %}
+
+<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+    {% for product in products %}
+        <div style="background-color: purple; height: 100px; display: flex; align-items: center; justify-content: center;">
+            {{ product.titel }}
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
+<!--//------SECTION3----->
+
+<!----------SECTION----->
+{% block section12 %}
+<!---->
+<div class = 'row'>
+    <div> Kunstwerken Marlous Muda </div>
+</div>
+<!---->
+<div class = "kunst_alge">
+    {% for kunst in kunsts %}
+
+    <div class = "afbeelding&titel">
+        <div style="background-color: #c5a643; height: 300px;width:300px; display: flex; align-items: center; justify-content: center;clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); margin: 5% 5% 5% 5%;">
+            <div style="height:290px; width:290px;clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);"> 
+                <img style="width: 100% " src="{{ kunst.afbeeld.url }}" alt="in construction">
+            </div>
+        </div>
+        <div style="margin-top: 8px; font-weight: bold; text-align: center;">{{ kunst.titel }}</div>
+    </div>
+    {% endfor %}
+</div>
+ {% endblock %}
+<!---->
+<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 80px;"></div>

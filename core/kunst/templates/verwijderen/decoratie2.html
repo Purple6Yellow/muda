@@ -155,3 +155,23 @@ clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
 <!--//section-->
 
 <div class="width:10px;background-color:yellow;border:2px solid black;"> {{kunst.titel}}</div>
+
+<!----------SECTION----->
+{% block section11 %}
+
+<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 80px;">
+    {% for deco in decos %}
+    <div class = "afbeelding&titel">
+        <div style="background-color: #c5a643; height: 300px;width:300px; display: flex; align-items: center; justify-content: center;clip-path:ellipse(25% 40% at 50% 50%); margin: 5% 5% 5% 5%;">
+        
+            <div style="height:290px; width:290px;clip-path:ellipse(25% 40% at 50% 50%);"> 
+                <img style="width: 100% " src="{{ deco.afbeeld.url }}" alt="in construction">
+           
+            </div>
+        </div>
+        <div style="margin-top: 8px; font-weight: bold; text-align: center;">{{ decor.titel }}</div>
+    </div>
+  
+    {% endfor %}
+{% endblock %}
+<!--//------SECTION3----->

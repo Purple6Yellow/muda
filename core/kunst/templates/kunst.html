@@ -15,14 +15,23 @@ clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
 </style>
 {% endblock %}
 <!--//head-->
+<!-----------------------------------------------------------------------------BODY----->
 
+<!----------HEADER----->
+{% block header %}
+<div class = "row">
+    <div class="headertitel"> Kunstgalerie Marlous Muda </div>
+    <div class="headertekst"></div>
+</div>
+{% endblock header %}
+<!-----//---HEADER----->
 
 
 <!----------SECTION----->
 {% block section11 %}
 <!---->
 <div class = 'row'>
-    <div class="font-20B TxtCenter Margin"> Kunstwerken Marlous Muda </div>
+    
 </div>
 <!---->
 <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 80px;">
@@ -41,35 +50,6 @@ clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
 </div>
  {% endblock %}
 <!---->
-
-
-<!----------SECTION----->
-{% block section12 %}
-<!---->
-<div class = 'row'>
-    <div> Kunstwerken Marlous Muda </div>
-</div>
-<!---->
-<div class = "kunst_alge">
-    {% for kunst in kunsts %}
-
-    <div class = "afbeelding&titel">
-        <div style="background-color: #c5a643; height: 300px;width:300px; display: flex; align-items: center; justify-content: center;clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); margin: 5% 5% 5% 5%;">
-            <div style="height:290px; width:290px;clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);"> 
-                <img style="width: 100% " src="{{ kunst.afbeeld.url }}" alt="in construction">
-            </div>
-        </div>
-        <div style="margin-top: 8px; font-weight: bold; text-align: center;">{{ kunst.titel }}</div>
-    </div>
-    {% endfor %}
-</div>
- {% endblock %}
-<!---->
-
-
-
-
-
 <!--//------SECTION----->
-<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 80px;">
+
 

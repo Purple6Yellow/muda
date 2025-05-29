@@ -1,12 +1,31 @@
 from django.shortcuts import render
-from .models import Kunst
+from .models import Kunst, Decor
 from django.views.generic import ListView, DetailView
+
+### -- DECO
+class Decoratie(ListView):
+    model: Decor
+    template_name = 'decoratie.html'
+
+def deco_vie(request):
+    decor = Decor.objects.all()
+    return render(request,'decoratie.html', {'decor': decor})
+### // DECO
+
 
 
 ### Kunst
 class OverzichtKunst(ListView):
     model = Kunst
 
+class KunstTemplate3(OverzichtKunst):
+    def get_queryset(self):
+        context = Kunst.objects.order_by('created_by')[7:8]
+        #print(context)
+        return context
+    
+    template_name = 'aanhetwerk.html'
+    #print('index.html')
     
 class KunstTemplate2(OverzichtKunst):
     def get_queryset(self):
@@ -26,11 +45,6 @@ class KunstTemplate1(OverzichtKunst):
     template_name = 'kunst.html'
     print("kunst.html")
 
-class KunstTemplate3(OverzichtKunst):
-    template_name = 'decoratie.html'
-    print("decor.html")
-
-
 class DetailKunst(DetailView):
     model = Kunst
     template_name = 'kunst_detail.html'
@@ -42,9 +56,9 @@ def kunst(request):
     kunsts = Kunst.objects.order_by('created_by').reverse
     return render(request,'kunst.html', {'kunsts': kunsts})
 
-def deco(request):
-    decos = Kunst.objects.all()
-    return render(request,'decoratie.html', {'decos': decos})
+def werk(request):
+    werk = Kunst.objects.all()
+    return render(request,'aanhetwerk.html', {'werk': werk})
 
 
 def product_list(request):
