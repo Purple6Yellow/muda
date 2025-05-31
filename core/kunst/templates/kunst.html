@@ -1,17 +1,9 @@
 {% extends 'basis.html' %}
 {% load static %}
 <!--head-->
-{% block head %}
+{% block styles %}
 <style>
-.vorm_rand{background-color: #c5a643; width:100px; height: 100px; padding: 1% 1% 1% 1%;
-clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
 
-.vorm{background-color:red; width:100%; height: 100%;margin:0% 0 0 0%;
-        clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
-.vorm img{width:100%;}
-
-
-.kunst_alge{display: grid; grid-template-columns: repeat(4, 1fr); gap: 80px;}
 </style>
 {% endblock %}
 <!--//head-->
@@ -34,17 +26,16 @@ clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
     
 </div>
 <!---->
-<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 80px;">
+<div class="grid">
     {% for kunst in kunsts %}
-
     <div class = "afbeelding&titel">
-        <div style="background-color: #c5a643; height: 300px;width:300px; display: flex; align-items: center; justify-content: center;clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); margin: 5% 5% 5% 5%;">
-            <div style="height:290px; width:290px;clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);"> 
+        <div class = "vorm-rand">
+            <div class="vorm">
                <a href="/kunst_detail.html/{{ kunst.pk }}"> <img style="width: 100% " src="{{ kunst.afbeeld.url }}" alt="in construction"> </a>
                <a href="{% url 'KunstDetail' kunst.pk %}" TARGET = "_blank"> <img style="width: 100% " src="{{ kunst.afbeeld.url }}" alt="in construction"> </a>
             </div>
         </div>
-        <div style="margin-top: 8px; font-weight: bold; text-align: center;">{{ kunst.titel }}</div>
+        <div class="vorm-titel">{{ kunst.titel }}</div>
     </div>
     {% endfor %}
 </div>

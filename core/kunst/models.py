@@ -13,10 +13,22 @@ class Kunst (models.Model):
         return f"{self.titel} -- {self.created_by}"
 ### //Kunst
 
-### Decor
+### DECOR
 class Decor (models.Model):
     titel = models.CharField(max_length=200)
     afbeeld = models.ImageField(upload_to='images/', null = True, blank = True)
+    created_by = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return f"{self.titel}"
+        return f"{self.titel} -- {self.created_by}"
+### //DECOR
+
+### WERK
+class Werk (models.Model):
+    titel = models.CharField(max_length=200)
+    afbeeld = models.ImageField(upload_to='images/', null = True, blank = True)
+    created_by = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return f"{self.titel} -- {self.created_by}"
+### //WERK

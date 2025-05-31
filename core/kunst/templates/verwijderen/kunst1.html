@@ -1,0 +1,60 @@
+{% extends 'basis.html' %}
+{% load static %}
+
+<!--head-->
+{% block head %}
+<style>
+.galerie{flex-direction: row; display: flex;flex-wrap:wrap;gap:1rem;}
+.item{flex:1 1 calc(25% - 1 rem);box-sizing:border-box;}
+
+
+.toonstel{flex-direction:row; grid-template-columns:repeat(4, 1fr);gap: 1rem;background-color:yellow;}
+.toonstel img {width: 30%; margin: 0% 0% 0% 0%;}
+</style>
+{% endblock %}
+<!--//head-->
+
+
+
+<!--------------------SECTION--------------------------------------------------------------------------------------------------------->
+{% block header %}
+<div class = "row"> 
+    <div class = "col-12 kptxt_kunst"  >
+        <p style = "font-size: 30px; text-align: center;"> Kunst </p>
+    </div>
+</div>
+{% endblock %}
+
+
+<!----------SECTION1----->
+{% block section11 %}
+{% for kunst in kunst_list %}
+<div>
+    <div class = "toonstel">
+        <img src="{{ kunst.afbeeld.url }}" alt="in construction">
+        {{kunst.titel}}
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
+<!-----//---SECTION----->
+
+<!----------SECTION2----->
+{% block section2 %}
+{% for kunst in kunst_list %}
+    <div class = "row"> 
+        <div class = "col-6" style=" background-color: inherit;padding: 10% 10% 10% 10%">
+        {{ kunst.titel }} 
+        </div>
+
+        <div class = "col-6" style=" background-color: inherit;clip-path: inset(0% 0% round 20px);">
+            <img style="width:30%; margin:10% 10% 10% 10%;" src="{{ kunst.afbeeld.url }}" alt="in construction">
+        </div>
+    </div>
+{% endfor %}
+{% endblock %}
+<!-----//---SECTION----->
+
+
+  
+

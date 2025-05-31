@@ -5,16 +5,13 @@
 <head>
     <meta charset = "utf-8">
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-    <title>Marie Loise Art & Decor  {% block title %}{% endblock title %}</title>   
+    <title>Marlous Muda Kunst & Decoratie  {% block title %}{% endblock title %}</title>   
     <link rel="stylesheet" type="text/css" media = "screen" href = "{% static 'css/cssMobiel.css' %}">
     <link rel="stylesheet" type="text/css" media = "screen" href = "{% static 'css/cssLaptop.css' %}">  
     <script src = "{% static 'js/uitbreiding/jquery.js' %}" type= "text/javascript"></script>
-    <style>
- 
-
-
-
-    </style> {% block styles %} {% endblock %} 
+    {% block styles %}
+    <style></style>
+    {% endblock %} 
 </head>
 <!------------------------------------>
 <!-----------BODY--------------------------------------------------------------------------------------->
@@ -73,6 +70,7 @@
 <!---->
 <div class = "scripts">
 <script src = "{% static 'js/eigenontwerp/menu.js' %}" type= "text/javascript"></script>  
+{% block scripts %}{% endblock %} 
 
 <script>
      

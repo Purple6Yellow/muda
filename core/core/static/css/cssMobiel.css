@@ -76,8 +76,22 @@ a{ color:inherit; }
 /*-- INDEX ----------------------------------------------------------------------------------------*/
 
 /*--//INDEX---------------------------------------------------------------------------------------*/
+/*--KUNST & DECORATIE-------laptop-----------------------------------------------------------------*/
+.grid{display:grid !important; 
+    grid-template-columns: repeat(1, 1fr) !important; gap: 80px;background-color:inherit;}
+.vorm-rand{background-color: #c5a643; 
+    height: 300px;width:300px; 
+    display: flex; align-items: center; justify-content: center;
+    clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); margin: 5% 5% 5% 5%;}
+.vorm{height:290px; width:290px;
+    clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
+.vorm img{width:100%;}
+.vorm-titel{margin-top: 8px; font-weight: bold; text-align: center;}
+
+.orde{background-color: inherit;} /* anders foto's door elkaar */
+/*//KUNST & DECORATIE-------laptop-----------------------------------------------------------------*/
 /*--VOLGORDE-------------------------------------------------------------------------------------*/
-/* ALGEMEEN > BASIS > INDEX > 
+/* ALGEMEEN > BASIS > INDEX > KUNST&DECORATIE
 
 /*--//VOLGORDE-----------------------------------------------------------------------------------*/
 
