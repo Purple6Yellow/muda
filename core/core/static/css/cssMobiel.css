@@ -12,6 +12,9 @@
 .sectionblock5{background-color: #81836E;}
 .footerblock{background-color:#f5f5dc;}
 .sectionblock11{background-color:inherit;}
+
+.sectionblock20{background-color:#B1624F;}
+.sectionblock21{background-color:#f5f5dc;}
 /*--*/
 body{background-color:#f5f5dc;}
 a{color:#888A82;text-decoration:none;}
@@ -47,7 +50,7 @@ li{font-size:30px;}
 /*--//ALGEMEEN -----------------------------------------------------------------------------------*/
 /*--BASIS-----------------------------------------------------------------------------------------*/
 .headerblock,.sectionblock0, .sectionblock1, .sectionblock2, .sectionblock3, 
-.sectionblock4,.sectionblock5, .footerblock{width:100%; height:100%;clip-path: inset(0% 0% round 20px);}
+.sectionblock4,.sectionblock5, .sectionblock20, .footerblock{width:100%; height:100%;clip-path: inset(0% 0% round 20px);}
 .sectionblock0, .sectionblock1, .sectionblock2, .sectionblock3, .sectionblock4,.sectionblock5{margin-top:1%;}
 .bannerblock{height:40px;width:100%;position:absolute; top:0;}/*position moet gecombinaard met z-index menulogo*/
 .bannerblock img{width:100%;height:100%;}

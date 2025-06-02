@@ -3,6 +3,14 @@
 <!--head---->
 {% block styles %}
 <style>
+    .blok1{background-color:#B1624F;height: 100%;width:80%;margin-left:10%;padding:3% 3% 3% 3%;}
+    .blok2{background-color:white;padding:2% 2% 2% 2%;height: 100%;}
+    .blok3{background-color:white;border: solid 2px black;height:100%;}
+    .font-11{font-size:20px; margin-top:5% }
+    .blok3-kleur{background-color:#B1624F;border: solid 2px black;height:100%;margin:0 2% 0 2%;}
+
+
+
     .blokli{opacity: 80%; background-color: inherit;color:black; margin: 2% 2% 2% 2%;}
     .blokli img{width:50%; clip-path: inset(0 0 round 20px);}
     .blokli li{list-style-type: disc; font-size:20px;line-height: 1.5;padding:1% 1% 1% 1%;text-align:left;}
@@ -16,15 +24,24 @@
 <!----------HEADER----->
 {% block header %}
 <div class = "row">
-    <div class="headertitel"> CV: Marlous Muda </div>
-    <div class="headertekst"> Docente Beeldende vorming, Kunst algemeen, CKV en decorateur superieur </div>
+    <div class="headertitel"> 
+        <div class = "blok1">
+            <div class = "blok2">
+                <div class = "blok3">
+                        <div> Marlous Muda </div>
+                        <div class="font-11">Docente Beeldende vorming, Kunst algemeen, CKV en decorateur superieur  </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock header %}
 <!-----//---HEADER----->
+
 <!----------SECTION----->
 {% block section11 %}
 <div class ="row">
-    <div class ="col-4">
+    <div class ="col-3">
         <div class = "subtitel"> Profiel </div>
         <div class ="blokli">   
             Met mijn vriend en onze twee kinderen wonen we in Den Haag
@@ -34,12 +51,12 @@
             ,in de tuin, wandelen, skien, tennissen en lees ik graag.  
         </div>
     </div>
-    <div class ="col-4">
+    <div class ="col-3">
         <div class ="blokli">
             <img src="{% static 'img/MM.jpg' %}" alt="in constructie">
         </div>
     </div>
-    <div class ="col-4">
+    <div class ="col-3">
         <div class = "subtitel"> <br> </div>
         <div class="blokli">
                 <div>marlousmuda@hotmail.com<br>
@@ -49,8 +66,10 @@
 </div>
 <!------>
 <div class ="row">
-   <div class = "col-4">
-        <div class = "subtitel"> Opleiding </div>
+   <div class = "col-3">
+        <div class = "subtitel">  
+            <div class="blok3"> Opleiding </div>
+        </div>
         <div class = "blokli">
             <ul>
                 <li> Amsterdamse Hoge school voor de kunsten 1e graads
@@ -63,82 +82,10 @@
             </ul>
         </div>
     </div>
-    <div class = "col-4"> 
-        <div class = "subtitel"> Eigenschappen </div>
-        <div class = "blokli">
-            <ul>
-                <li> beelddenker</li>
-                <li> creatief</li>
-                <li> onderzoeksgericht</li>
-                <li> energiek</li>
-                <li> gestructureerd</li>
-            </ul>
+    <div class = "col-3"> 
+        <div class = "subtitel"> 
+            <div class = "blok3-kleur"> Eigenschappen </div>
         </div>
-    </div>
-    <div class = "col-4"> 
-        <div class = "subtitel"> Expertise </div>
-        <div class = "blokli">
-            <ul>
-                <li> Ruimtelijks vormgeven</li>
-                <li> Decoratieur superieur</li>
-                <li> Docent 1e graads</li>
-                <li> Kunstgeschiedenis</li>
-                <li> Cultuur coördinator </li>
-            </ul>
-        </div>
-    </div>
-</div>
-{% endblock %}
-<!--//-------SECTION----->
-
-<!----------SECTION----->
-{% block section1 %}
-<!---->
-<div class = 'row'>
-    <div class = "col-4">
-        <div class = "subtitel"> Profiel </div>
-        <div class="blokli">
-            Met mijn vriend en onze twee kinderen wonen we in Den Haag
-            Naast mijn werk voor het Dalton Den Haag kan je mij ook vinden
-            in mijn atelier in de binnenstad. Ik werk daar aan decorstukken
-            /schilderijen in acryl en olieverf. Daarnaast ben ik veel buiten 
-            ,in de tuin, wandelen, skien, tennissen en lees ik graag.  
-        </div>
-     </div>
-    <div class = "col-4 foto">
-      <img src="{% static 'img/MM.jpg' %}" alt="in constructie">
-    </div>
-    <div class = "col-4 subtitel"> <br> <Br>
-        <div class="">
-                <div>marlousmuda@hotmail.com</div>
-                   <div>06-51 24 95 56</div>
-        </div>
-     </div>
-</div>
-<!----> 
-{% endblock %}
-<!--//-------SECTION----->
-
-<!----------SECTION----->
-{% block section2 %}
-<!---->
-<div class = 'row'>
-    <div class = "col-4">
-        <div class = "subtitel"> Opleiding</div>
-        <div class = "blokli">
-            <ul>
-                <li> Amsterdamse Hoge school voor de kunsten 1e graads
-            bevoegd beeldende vorming. </li>
-                <li> Deelcertificaat kunstcoordinator CKV Universiteit Leiden</li>
-                <li> Training cultuur coördinaat</li>
-                <li> Cursus maak onderwijs</li>
-                <li> VTS Visual Thinking Strategies</li>
-                <li> Nimento Utrecht 1989 - 1993 </li>
-            </ul>
-        </div>
-    </div>
-    <div class = "col-4">
-        <div class = "subtitel"> Eigenschappen</div>
         <div class = "blokli">
             <ul>
                 <li> Beelddenker</li>
@@ -149,8 +96,11 @@
             </ul>
         </div>
     </div>
-    <div class = "col-4">
-        <div class = "subtitel">  Expertise </div>
+    <div class = "col-3"> 
+        <div class = "subtitel">  
+            <div class="blok3">  Expertise </div>
+        </div>
+
         <div class = "blokli">
             <ul>
                 <li> Ruimtelijks vormgeven</li>
@@ -162,33 +112,52 @@
         </div>
     </div>
 </div>
-<!----> 
-{% endblock %}
-<!--//--------SECTION----->
-
-<!----------SECTION----->
-{% block section3 %}
-<!---->
-<div class = 'row'>
-    <div class = "col-12 subtitel"> ------------Ervaring-------------- </div>
-<!---->
-<div class = 'row'>
-    <div class="col-12">
-        <div class = "subtitel"> Docente Kunst Beeldende Vorming </div>
-        <div class = "blokli">
+<!------>
+<div class ="row">
+     <div class ="col-3">
+        <div class = "subtitel"> 
+            <div class = ""> ________________________ </div>
+        </div>
+    </div>
+    <div class ="col-3">
+        <div class = "subtitel"> 
+            <div class = "blok3-kleur">Ervaring </div>
+        </div>
+    </div>
+    <div class ="col-3">
+        <div class = "subtitel"> 
+            <div class = ""> ________________________ </div>
+        </div>
+    </div>
+</div>
+<!------>
+<div class ="row">
+    <div class ="col-12">
+        <div class = "headertekst Margin">  Docente Kunst Beeldende Vorming </div>
+    </div>
+</div>
+<!------>
+<div class ="row">
+    <div class ="col-12">
+       <div class = "blokli">
             <ul>
                 <li>Dalton Den Haag          2019 - heden</li>
                 <li>Hofstad Lyceum Den Haag  2002 - 2020 </li>
                 <li>Maerlant College Brielle 1997 - 2002 </li>
             </ul>
         </div>
-     </div>
+    </div>
 </div>
-<!----> 
-<div class = 'row'>
-    <div class="col-12">
-        <div class = "subtitel"> Docente Kunst Beeldende Vorming </div>
-        <div class = "blokli">
+<!------>
+<div class ="row">
+    <div class ="col-12">
+        <div class = "headertekst Margin">  Producent van musicals  </div>
+    </div>
+</div>
+<!------>
+<div class ="row">
+    <div class ="col-12">
+        <div class = "headertekst blokli">
             Met veel plezier heb ik 18 jaar de productie en de decors gemaakt 
             van verschillende soorten theaterstukken met muziek, dans en zang voor de leerlingen
             van het Hofstad Lyceum. Samen met de muziekdocent, techniekdocent, technische
@@ -200,32 +169,50 @@
         </div> 
     </div>
 </div>
-<!---->
-<div class = 'row'>
-    <div class="col-12">
-        <div class = "subtitel"> Decoratie superieur  </div>
-        <div class = "blokli">
+<!------>
+<div class ="row">
+    <div class ="col-12">
+        <div class = "headertekst Margin"> Decoratie superieur </div>
+    </div>
+</div>
+<!------>
+<div class ="row">
+    <div class ="col-12">
+        <div class = "headertekst blokli">
             Op dit moment doe ik de opleiding Decoratie Superieur en hoop 
             deze af te ronden in september 2025. 
         </div> 
     </div>
 </div>
-<!---->            
-{% endblock %}
-<!--//--------SECTION----->
-<!----------SECTION----->
-{% block section4 %}
-<!---->
-<div class = 'row'>
-    <div class="col-12">
-      <div class = "subtitel"> Vaardigheden  </div>
-        <div class = "blokli">
+<!------>
+<div class ="row">
+     <div class ="col-3">
+        <div class = "subtitel"> 
+            <div class = ""> ________________________ </div>
+        </div>
+    </div>
+    <div class ="col-3">
+        <div class = "subtitel"> 
+            <div class = "blok3-kleur">Vaardigheden </div>
+        </div>
+    </div>
+    <div class ="col-3">
+        <div class = "subtitel"> 
+            <div class = ""> ________________________ </div>
+        </div>
+    </div>
+</div>
+<!------>
+<div class = "row">
+    <div class="headertitel"> 
+        <div class = "blok1">
              magister, somtoday, Classroom, Teams, Adobe Photoshop, 3D Printen, Canva.
             <br>
             ipad pro: Imovie, Stop Motion, Paper, Sketches
-        </div> 
+        </div>
     </div>
 </div>
-<!---->   
 {% endblock %}
-<!--//--------SECTION----->
+<!--//-------SECTION----->
+
+
