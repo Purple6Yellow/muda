@@ -3,6 +3,10 @@
 <!--head---->
 {% block styles %}
 <style>
+.flyerhome{font-size:50px;}
+.flyerhome{background-color: inherit;align-items: center; justify-content: center;padding:5% 5% 5% 5%;}
+.flyerhome img{width:30%; clip-path: inset(0 0 round 20px);}
+
 
 </style>
 {% endblock %}
@@ -19,28 +23,11 @@
 {% endblock header %}
 <!-----//---HEADER----->
 
-<!----------SECTION1----->
+<!----------SECTION----->
 {% block section1 %}
-{% for kunst in kunst_list %}
     <div class = "row"> 
-        <div class = "col-6" style=" background-color: inherit;align-items: center; justify-content: center;padding:10% 1% 1% 10%;">
-            <div>Het laatste werk van Marlous Muda. Voor meer zie Art</div>
-            <div style="margin-top: 8px; font-weight: bold; padding: 0% 10% 10% 12%;">{{ kunst.titel }}</div>
-        </div>
-        <div class = "col-6" style=" background-color: inherit;">
-            <img style="width:30%; align-items: center; justify-content: center;padding:1% 1% 1% 1%;" src="{{ kunst.afbeeld.url }}" alt="in construction">
- 
-        </div>
-    </div>
-{% endfor %}
-{% endblock %}
-<!-----//---SECTION----->
-
-<!----------SECTION1----->
-{% block section2 %}
-    <div class = "row"> 
-        <div class = "col-6" style=" background-color: inherit;align-items: center; justify-content: center;padding:10% 1% 1% 10%;">
-            <div> Hier zou je je laatste activiteiten kunnen plaatsen</div>
+        <div class = "col-10 flyerhome">
+            <div> Hier komen de tentoolstellingen waar je schilderijen zijn te aanschouwen door het publiek. </div>
             <div style="margin-top: 8px; font-weight: bold; padding: 0% 10% 10% 12%;"></div>
         </div>
         <div class = "col-6" style=" background-color: inherit;">
@@ -48,3 +35,64 @@
     </div>
 {% endblock %}
 <!-----//---SECTION----->
+
+<!----------SECTION----->
+{% block section2 %}
+    <div class = "row"> 
+        <div class = "col-6 flyerhome">
+            <div> Hier de laatste toegevoegde foto van aan kunst. </div>
+        </div>
+        <div class = "col-6 flyerhome">
+            <img src = "{{ kunst.afbeeld.url }}" alt="in construction">
+            <br>
+            {{ kunst.titel }}
+        </div>
+    </div>
+{% endblock %}
+<!-----//---SECTION----->
+
+<!----------SECTION----->
+{% block section3 %}
+    <div class = "row"> 
+        <div class = "col-6 flyerhome">
+            <div> Hier de laatste toegevoegde foto van het werk. </div>
+        </div>
+        <div class = "col-6 flyerhome">
+            {% if werk.afbeeld %}
+                <img src="{{ werk.afbeeld.url }}" alt="{{ werk.titel }}">
+                <br>
+                 {{ werk.titel }}
+            {% else %}
+                <p> Geen afbeelding beschikbaar.</p>
+                <p> Afbeelding URL: {{ werk.afbeeld.url }}</p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
+<!-----//---SECTION----->
+
+<!----------SECTION----->
+{% block section4 %}
+    <div class = "row"> 
+        <div class = "col-6 flyerhome">
+            <div> Hier de laatste toegevoegde foto van het decor. </div>
+        </div>
+        <div class = "col-6 flyerhome">
+            {% if decor.afbeeld %}
+                <img src="{{ decor.afbeeld.url }}" alt="{{ decor.titel }}">
+                <br>
+                 {{ decor.titel }}
+            {% else %}
+                <p> Geen afbeelding beschikbaar.</p>
+                <p> Afbeelding URL: {{ decor.afbeeld.url }}</p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
+<!-----//---SECTION----->
+
+
+
+
+
+

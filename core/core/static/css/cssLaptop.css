@@ -7,10 +7,11 @@
 /*--//KLEUREN*/
 /*--LETTER--*/
 .banner_txtblock{font-size:22px;text-align: center;}
-body{font-size:20px;line-height: 1.4;}
+body{font-size:30px;line-height: 1.4;}
 .font-20B{font-size: 36px; font-weight: 600;} 
-.menu-container li{font-size:30px;}
-.headertitel{font-size:36px;font-weight: 600;}
+.menu-container li{font-size:40px;}
+.headertitel{font-size:80px;font-weight: 600;}
+.subtitel{font-size:50px}
 /*--//LETTER--*/
 /*--DIVERS--*/
 /*--*/

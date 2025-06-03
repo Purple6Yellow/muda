@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import DetailKunst, KunstTemplate1, KunstTemplate2, cv, kunst, decor, werk, contact
+from .views import DetailKunst, KunstTemplate1, KunstTemplate2, cv, kunst, decor, werk, contact, index
 # from .views import index, decor
 from django.conf import settings
 from django.conf.urls.static import static 
@@ -20,7 +20,9 @@ urlpatterns = [
 ### -- WERK -- ### 
     path('aanhetwerk.html/', werk),
 ### // WERK -- ### 
-
+######---INDEX----############
+    path('index.html/', index),
+ 
 ### -- KUNST -- ### WERKT NOG NIET
     path('kunst.html/', KunstTemplate1.as_view(), name = 'Kunst'),
     path('index.html/', KunstTemplate2.as_view(), name = 'index'),
@@ -30,3 +32,5 @@ urlpatterns = [
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+
+

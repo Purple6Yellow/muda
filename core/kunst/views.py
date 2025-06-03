@@ -2,9 +2,14 @@ from django.shortcuts import render, get_object_or_404
 from .models import Kunst, Decor, Werk
 from django.views.generic import ListView, DetailView
 
-### -- ALGEMEEN -- ### 
+### -- INDEX-- ### 
 def index(request):
-  return render (request, 'index.html' )
+  kunst = Kunst.objects.latest('created_by')
+  werk = Werk.objects.latest('created_by')
+  decor = Decor.objects.latest('created_by')
+  return render(request, 'index.html', {'kunst': kunst, 'werk': werk, 'decor': decor})
+### // INDEX-- ### 
+### -- ALGEMEEN -- ### 
 def cv(request):
     return render (request, 'cv.html' )
 def contact(request):
@@ -23,12 +28,16 @@ def decor (request):
 ### // DECORATIE -- ### 
 
 ### -- AANHETWERK -- ### 
+class OverzichtWerk(ListView):
+    model = Werk
+
 def werk (request):
     print('request werk')
     #decors = Decor.objects.order_by('created_by').reverse
-    werks= Werk.objects.all()
+    werks= Werk.objects.order_by('created_by').reverse
     print ("werk:", Werk.objects.all())
     return render(request,'aanhetwerk.html', {'werks': werks})
+
 ### // AANHETWERK -- ### 
 
 ### -- KUNST -- ### 
@@ -38,6 +47,18 @@ class OverzichtKunst(ListView):
 class DetailKunst(DetailView):
     model = Kunst
     template_name = 'kunst_detail.html'
+
+def kunst(request):
+   # kunsts = Kunst.objects.all()
+    # kunsts = Kunst.objects.order_by('created_by').reverse
+    kunsts = Kunst.objects.order_by('-created_by')
+    print(kunsts)
+    return render(request,'kunst.html', {'kunsts': kunsts})
+### // KUNST -- ### 
+
+
+
+
 
 ##### UITPROBEREN 
 def KunstPK(request,pk):
@@ -54,9 +75,12 @@ def KunstPK(request,pk):
     return render(request, 'kunst_detail.html', context)
 ##### UITPROBEREN 
 
+##### UITPROBEREN 2
+
 
 ######### NODIG OM MODELS OP MEERDERE VERSCHILLENDE PAGINA'S TE SHOWEN 
 class KunstTemplate1(OverzichtKunst):
+    print('KunstTemplate1')
     def get_queryset(self):
         context = Kunst.objects.all()
         #print(context)
@@ -66,8 +90,9 @@ class KunstTemplate1(OverzichtKunst):
     print("kunst.html")
 
 class KunstTemplate2(OverzichtKunst):
+    print('KunstTemplate2')
     def get_queryset(self):
-        context = Kunst.objects.order_by('created_by')[7:8]
+        context = Kunst.objects.latest('created_by')
         #print(context)
         return context
     
@@ -75,6 +100,7 @@ class KunstTemplate2(OverzichtKunst):
     #print('index.html')
 
 class KunstTemplate3(OverzichtKunst):
+    print('KunstTemplate3')
     def get_queryset(self):
         context = Kunst.objects.order_by('created_by')[7:8]
         #print(context)
@@ -90,11 +116,7 @@ class KunstTemplate3(OverzichtKunst):
 
 ### VERWIJDJEREN ###
 
-def kunst(request):
-   # kunsts = Kunst.objects.all()
-    kunsts = Kunst.objects.order_by('created_by').reverse
-    print(kunsts)
-    return render(request,'kunst.html', {'kunsts': kunsts})
+
 
 
 
