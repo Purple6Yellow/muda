@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Kunst, Decor, Werk
+from .models import Kunst, Decor, Werk, Tent
 
 admin.site.site_header = "Admin omgeving Marlous Muda Art"
 
@@ -7,7 +7,7 @@ admin.site.site_header = "Admin omgeving Marlous Muda Art"
 #admin.site.register(Kunst)
 @admin.register(Kunst)
 class KunstAdmin(admin.ModelAdmin):
-    list_display = ( "titel","created_by")
+    list_display = ( "titel","created_by", )
     list_filter = ("titel",)
     pass
 ###KUNST###
@@ -22,7 +22,8 @@ class DecorAdmin(admin.ModelAdmin):
 ###WERK###
 @admin.register(Werk)
 class WerkAdmin(admin.ModelAdmin):
-    list_display = ( "titel","created_by")
+    list_display = ( "titel","created_by",)
     list_filter = ("titel",)
     pass
 ###WERK###
+

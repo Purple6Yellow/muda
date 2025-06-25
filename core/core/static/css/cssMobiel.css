@@ -2,19 +2,21 @@
 
 /*--ALGEMEEN -----------------------------------------------------------------------------------*/
 /*--KLEUREN--*/
+
 .sectionblock0{background-color:inherit;}
 .bannerblock{background-color:inherit;}
 .headerblock{background-color:inherit;}
 .sectionblock1{background-color:#81836E}
 .sectionblock2{background-color:#B1624F;}
-.sectionblock3{background-color:#777371;}
-.sectionblock4{background-color:#D0A372;}
+.sectionblock3{background-color:#7d8f9b;}
+.sectionblock4{background-color:#c99c6a;}
 .sectionblock5{background-color: #81836E;}
 .footerblock{background-color:#f5f5dc;}
 .sectionblock11{background-color:inherit;}
 
+
 .sectionblock20{background-color:#B1624F;}
-.sectionblock21{background-color:#f5f5dc;}
+.sectionblock21{background-color:#D0A372;}
 /*--*/
 body{background-color:#f5f5dc;}
 a{color:#888A82;text-decoration:none;}
@@ -26,7 +28,8 @@ a:hover, button a:hover{color:#A87544;}
 /*--//KLEUREN--*/
 /*--LETTER--*/
 body{
-  font-family: "Pinyon Script", cursive;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;}
 .headertitel{font-size:30px;}
@@ -44,7 +47,7 @@ li{font-size:30px;}
 .verbergenLap{display:inline-block;}
 .row{display:inline-block;width:100%;background-color:inherit;} 
 [class*="col-"]{display: inline-block;text-align: center;}
-.col-4,.col-6,.col-12,.col-30,.col-40{width:100%;}
+.col-2,.col-3,.col-4,.col-6,.col-10,.col-12,.col-30,.col-40{width:100%;}
 /*--*/
 .headertitel{text-align: center;justify-content:center;}
 .headertekst{float:Left;}
@@ -55,7 +58,7 @@ li{font-size:30px;}
 .headerblock,.sectionblock0, .sectionblock1, .sectionblock2, .sectionblock3, 
 .sectionblock4,.sectionblock5, .sectionblock20, .footerblock{width:100%; height:100%;clip-path: inset(0% 0% round 20px);}
 .sectionblock0, .sectionblock1, .sectionblock2, .sectionblock3, .sectionblock4,.sectionblock5{margin-top:1%;}
-.bannerblock{height:40px;width:100%;position:absolute; top:0;}/*position moet gecombinaard met z-index menulogo*/
+.bannerblock{height:40px;width:100%;position:absolute; top:0;clip-path: inset(0% 0% round 20px);}/*position moet gecombinaard met z-index menulogo*/
 .bannerblock img{width:100%;height:100%;}
 .banner_txtblock{width:40%;
     position:relative; opacity: 50%; top:0px;transform:translate(140%,-200%);z-index:20;}

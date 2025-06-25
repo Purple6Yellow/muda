@@ -1,0 +1,51 @@
+{% extends 'basis.html' %}
+{% load static %}
+<!--head-->
+{% block styles %}
+<style>
+</style>
+{% endblock %}
+<!--//head-->
+<!-----------------------------------------BODY------------------------------>
+<!----------HEADER----->
+{% block header %}
+<div class = "row">
+    <div class="headertitel"> Decoratie & Renovatie </div>
+    <div class="headertekst"> {{ decor.titel }}</div>
+</div>
+{% endblock header %}
+<!-----//---HEADER----->
+
+
+<!----------SECTION----->
+{% block section11 %}
+<!---->
+<div class = "row">
+    <div class = "grid">
+    {% if decors %}
+        {% for decor in decors %}
+        <div class = "orde">
+            <div class = "vorm-rand">
+                <div class = "vorm">
+                    <img src="{{ decor.afbeeld.url }}" alt="in construction"> </a>
+                </div>
+            </div>
+            <div class ="vorm-titel"> {{ decor.titel }}</div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p> Geen decoraties toonbaar </p>
+    {% endif %}
+    </div>
+</div>
+
+<!---->
+ {% endblock %}
+<!---->
+<!--//------SECTION----->
+
+
+
+
+
+

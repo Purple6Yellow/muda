@@ -3,9 +3,15 @@
 <!--head---->
 {% block styles %}
 <style>
-.flyerhome{font-size:50px;}
-.flyerhome{background-color: inherit;align-items: center; justify-content: center;padding:5% 5% 5% 5%;}
-.flyerhome img{width:30%; clip-path: inset(0 0 round 20px);}
+.tentoonstelling img{clip-path:inset(0 0 round 20px);margin:2% 0 0 0;}
+
+.flyerhome{padding: 2% 2% 2% 2%; background-color: inherit;margin:0 0 -2% 0;}
+.flyerhome img{width:70%; clip-path: inset(0 0 round 20px);float:right;}
+
+.flyerhome_txt{background-color:inherit;align-items: center; justify-content: center;padding:10% 5% 5% 0%;}
+
+
+
 
 
 </style>
@@ -25,12 +31,10 @@
 
 <!----------SECTION----->
 {% block section1 %}
-    <div class = "row"> 
-        <div class = "col-10 flyerhome">
-            <div> Hier komen de tentoolstellingen waar je schilderijen zijn te aanschouwen door het publiek. </div>
-            <div style="margin-top: 8px; font-weight: bold; padding: 0% 10% 10% 12%;"></div>
-        </div>
-        <div class = "col-6" style=" background-color: inherit;">
+      <div class = "row"> 
+        <div class = "col-12 tentoonstelling">
+            <img src = "{{ tent.afbeeld.url }}" alt="in construction">
+            <br>
         </div>
     </div>
 {% endblock %}
@@ -40,12 +44,12 @@
 {% block section2 %}
     <div class = "row"> 
         <div class = "col-6 flyerhome">
-            <div> Hier de laatste toegevoegde foto van aan kunst. </div>
+            <a href="{% url 'kunst' %}"> <img src = "{{ kunst.afbeeld.url }}" alt="in construction"> </a>
         </div>
-        <div class = "col-6 flyerhome">
-            <img src = "{{ kunst.afbeeld.url }}" alt="in construction">
-            <br>
-            {{ kunst.titel }}
+        <div class = "col-6 flyerhome_txt">
+            <div> " {{kunst.titel}}  "</div>
+            <div> ( {{kunst.jaartal }} ) </div>
+            <div> {{kunst.materiaal}} , {{kunst.formaat}} </div>
         </div>
     </div>
 {% endblock %}
@@ -54,18 +58,13 @@
 <!----------SECTION----->
 {% block section3 %}
     <div class = "row"> 
-        <div class = "col-6 flyerhome">
-            <div> Hier de laatste toegevoegde foto van het werk. </div>
+        <div class = "col-6 flyerhome_txt">
+            <div> " {{werk.titel}}  "</div>
+            <div>  </div>
+            <div>  </div>
         </div>
         <div class = "col-6 flyerhome">
-            {% if werk.afbeeld %}
-                <img src="{{ werk.afbeeld.url }}" alt="{{ werk.titel }}">
-                <br>
-                 {{ werk.titel }}
-            {% else %}
-                <p> Geen afbeelding beschikbaar.</p>
-                <p> Afbeelding URL: {{ werk.afbeeld.url }}</p>
-            {% endif %}
+           <a href = "{% url 'werk' %}"> <img style="float:left" src = "{{ werk.afbeeld.url }}" alt="in construction"> </a>
         </div>
     </div>
 {% endblock %}
@@ -75,18 +74,19 @@
 {% block section4 %}
     <div class = "row"> 
         <div class = "col-6 flyerhome">
-            <div> Hier de laatste toegevoegde foto van het decor. </div>
-        </div>
-        <div class = "col-6 flyerhome">
             {% if decor.afbeeld %}
-                <img src="{{ decor.afbeeld.url }}" alt="{{ decor.titel }}">
-                <br>
-                 {{ decor.titel }}
+                <a href = "{% url 'decor' %}"><img src="{{ decor.afbeeld.url }}" alt="{{ decor.titel }}"> </a>
             {% else %}
                 <p> Geen afbeelding beschikbaar.</p>
                 <p> Afbeelding URL: {{ decor.afbeeld.url }}</p>
             {% endif %}
         </div>
+        <div class = "col-6 flyerhome_txt">
+            <div> " {{decor.titel}}  "</div>
+            <div> ( {{decor.jaartal }} ) </div>
+            <div> {{decor.materiaal}} , {{decor.formaat}} </div>
+        </div>
+      
     </div>
 {% endblock %}
 <!-----//---SECTION----->
