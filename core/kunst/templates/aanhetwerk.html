@@ -19,31 +19,22 @@
 <!----------SECTION----->
 {% block section11 %}
 <!---->
-<div class = "row">
-    <div class = "grid">
-    {% if werks %}
-        {% for werk in werks %}
-        <div class = "orde">
-            <div class = "vorm-rand">
-                <div class = "vorm">
-                    <img src="{{ werk.afbeeld.url }}" alt="in construction"> </a>
-                </div>
+<div class = "grid">
+    {% for werk in werks %}
+    <div class = "afbeelding&titel">
+        <div class = "vorm-rand">
+            <div class = "vorm">
+                <a href="/aanhetwerk_detail.html/ {{ werk.pk }}"> <img src="{{ werk.afbeeld.url }}" alt="in construction"> </a>
+                <a href = "{% url 'WerkDetail' werk.pk %}" TARGET = "_blank" > <img scr = "{{ werk.afbeeld.url }}"> </a>
             </div>
-            <div class ="vorm-titel"> {{ werk.titel }}</div>
         </div>
-        {% endfor %}
-    {% else %}
-        <p> Geen decoraties toonbaar </p>
-    {% endif %}
+        <div class ="vorm-titel"> {{ werk.titel }}</div>
     </div>
+    {% endfor %}
 </div>
-
 <!---->
  {% endblock %}
-<!---->
 <!--//------SECTION----->
-
-
 
 
 

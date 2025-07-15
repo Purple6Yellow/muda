@@ -3,19 +3,27 @@
 <!--head---->
 {% block styles %}
 <style>
+/*--  --CV----------MOBIEL----------------------------------------------------------------------------*/
     .blok1{background-color:#B1624F;height: 100%;width:80%;margin-left:10%;padding:3% 3% 3% 3%;}
     .blok2{background-color:white;padding:2% 2% 2% 2%;height: 100%;}
     .blok3{background-color:white;border: solid 2px black;height:100%;}
-    .font-11{font-size:20px; margin-top:5% }
+    .blok4{font-size:20px; margin-top:5% }
+    .subtitel{font-size:50px;}
+    .blokli{opacity: 80%; background-color:inherit;color:black; margin: 2% 2% 2% 2%;text-align: left;}
+    .blokli img{width:80%; clip-path: inset(0 0 round 20px);margin-left:10%}
+/*--// --CV----------MOBIEL----------------------------------------------------------------------------*/
+
+
+
     .blok3-kleur{background-color:#B1624F;border: solid 2px black;height:100%;margin:0 2% 0 2%;}
 
 
 
-    .blokli{opacity: 80%; background-color: inherit;color:black; margin: 2% 2% 2% 2%;}
-    .blokli img{width:50%; clip-path: inset(0 0 round 20px);}
+
+  
     .blokli li{list-style-type: disc; font-size:20px;line-height: 1.5;padding:1% 1% 1% 1%;text-align:left;}
     .foto img{width:50%; clip-path: circle(40%);}
-    .subtitel{font-size:50px;}
+
     .subtitel{margin: 1% 0% 1% 0%;}
 
 </style>
@@ -30,7 +38,7 @@
             <div class = "blok2">
                 <div class = "blok3">
                         <div> Marlous Muda </div>
-                        <div class="font-11">Docente Beeldende vorming, Kunst algemeen, CKV en decorateur superieur  </div>
+                        <div class="blok4">Docente Beeldende vorming, Kunst algemeen, CKV en decorateur superieur  </div>
                 </div>
             </div>
         </div>
@@ -45,9 +53,9 @@
     <div class ="col-3">
         <div class = "subtitel"> Profiel </div>
         <div class ="blokli">   
-            Met mijn vriend en onze twee kinderen wonen we in Den Haag
+            Met mijn vriend en onze twee kinderen wonen we in Den Haag. <br>
             Naast mijn werk voor het Dalton Den Haag kan je mij ook vinden
-            in mijn atelier in de binnenstad. Ik werk daar aan decorstukken
+            in mijn atelier in de binnenstad. <br> Ik werk daar aan decorstukken
             /schilderijen in acryl en olieverf. Daarnaast ben ik veel buiten 
             ,in de tuin, wandelen, skien, tennissen en lees ik graag.  
         </div>
@@ -59,17 +67,63 @@
     </div>
     <div class ="col-3">
         <div class = "subtitel"> <br> </div>
-        <div class="blokli">
+        <div class="blokre">
                 <div>marlousmuda@hotmail.com<br>
                 06-51 24 95 56</div>
         </div>
      </div>
 </div>
+{% endblock %}
+<!-----//---SECTION----->
+<!----------SECTION----->
+{% block section12 %}
+
 <!------>
 <div class ="row">
+    <!---->
    <div class = "col-3">
+    <div class="subtitel"> 
+        <div class = "blok1">
+            <div class = "blok2">
+                <div class = "blok3">
+                    <div>  Opleiding </div>
+                    <div class="blok4"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!---->
+   <div class = "col-3">
+    <div class="subtitel"> 
+        <div class = "blok1">
+            <div class = "blok2">
+                <div class = "blok3">
+                    <div>  Eigenschappen </div>
+                    <div class="blok4"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!---->
+   <div class = "col-3">
+    <div class="subtitel"> 
+        <div class = "blok1">
+            <div class = "blok2">
+                <div class = "blok3">
+                    <div>  Expertise </div>
+                    <div class="blok4"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!---->
+</div>
+
         <div class = "subtitel">  
-            <div class="blok3"> Opleiding </div>
+            <div class="blok3">Opleiding </div>
         </div>
         <div class = "blokli">
             <ul>

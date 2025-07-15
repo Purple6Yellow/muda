@@ -33,6 +33,10 @@ def decor (request):
 class OverzichtWerk(ListView):
     model = Werk
 
+class DetailWerk(DetailView):
+    model = Werk
+    template_name = 'werk_detail.html'
+    
 def werk (request):
     print('request werk')
     #decors = Decor.objects.order_by('created_by').reverse

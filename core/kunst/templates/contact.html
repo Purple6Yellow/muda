@@ -3,19 +3,6 @@
 <!--head---->
 {% block styles %}
 <style>
-    .blok1{background-color:#B1624F;height: 100%;width:80%;margin-left:10%;padding:3% 3% 3% 3%;}
-    .blok2{background-color:white;padding:2% 2% 2% 2%;height: 100%;}
-    .blok3{background-color:white;border: solid 2px black;height:100%;}
-    .font-11{font-size:20px; margin-top:5% }
-    .blok3-kleur{background-color:#B1624F;border: solid 2px black;height:100%;margin:0 2% 0 2%;}
-
-
-
-    .blokli{opacity: 80%; background-color: inherit;color:black; margin: 2% 2% 2% 2%;}
-    .blokli img{width:50%; clip-path: inset(0 0 round 20px);}
-    .blokli li{list-style-type: disc; font-size:20px;line-height: 1.5;padding:1% 1% 1% 1%;text-align:left;}
-    .foto img{width:50%; clip-path: circle(40%);}
-    .subtitel{font-size:30px;margin: 1% 0% 1% 0%;}
 
 </style>
 {% endblock %}
@@ -25,20 +12,39 @@
 {% block header %}
 <div class = "row">
     <div class="headertitel"> 
+        <div> Contact </div>
+    </div>
+</div>
+{% endblock header %}
+<!-----//---HEADER----->
+<!----------SECTION1----->
+{% block section1 %}
+<div class = "row">
+    <div class="headertitel"> 
         <div class = "blok1">
             <div class = "blok2">
                 <div class = "blok3">
-                        <div> Contact </div>
-                        <ul>
-                            <ol> Email: Marlousmuda@gmail.com</ol>
-                            <ol> telefoonnummer: 06-20562385 </ol>
-                            <ol> atelier: lepelstraat 9 </ol>
-                            <ol>  2512 CW  Den Haag </ol>
-                        </ul>
+                        <div>
+                            <div class = 'ol_hoofd'> Email: </div>
+                            <div class = "contact"> Marlousmuda@gmail.com</div>
+                        </div>
+
+                        <div>
+                            <div class = 'ol_hoofd'> Telefoonnummer: </div> 
+                            <div class = "nummer"> 06-20562385 </div>
+                        </div>
+                        
+                        <div>
+                            <div class = 'ol_hoofd'> Atelier: </div>  
+                            <div class = "contact"> Lepelstraat 9 </div>
+                            <div class = "contact2"> 2512 CW Den Haag</div>
+                          
+                        </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-{% endblock header %}
-<!-----//---HEADER----->
+
+{% endblock %}
+<!-----//---SECTION----->

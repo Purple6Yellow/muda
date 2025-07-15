@@ -2,7 +2,6 @@
 
 /*--ALGEMEEN -----------------------------------------------------------------------------------*/
 /*--KLEUREN--*/
-
 .sectionblock0{background-color:inherit;}
 .bannerblock{background-color:inherit;}
 .headerblock{background-color:inherit;}
@@ -13,8 +12,6 @@
 .sectionblock5{background-color: #81836E;}
 .footerblock{background-color:#f5f5dc;}
 .sectionblock11{background-color:inherit;}
-
-
 .sectionblock20{background-color:#B1624F;}
 .sectionblock21{background-color:#D0A372;}
 /*--*/
@@ -99,8 +96,25 @@ a{ color:inherit; }
 
 .orde{background-color: inherit;} /* anders foto's door elkaar */
 /*//KUNST & DECORATIE-------laptop-----------------------------------------------------------------*/
+/*----DETAIL-------laptop--------------------------------------------------------------------------*/
+.afbeeld, .afbeeld_txt{width:100%; background-color:inherit;padding-left:40%}
+.afbeeld img{height: 80vh;clip-path: inset(0 0 round 20px);}
+/*--//DETAIL-------laptop--------------------------------------------------------------------------*/
+/*--  --CONTACT----------MOBIEL----------------------------------------------------------------------------*/
+.blok1{background-color:#B1624F;height: 80%;width:80%;margin:10% 0 10% 10%;padding:3% 3% 3% 3%;;border: solid 2px black;}
+.blok2{background-color:white;padding:2% 2% 2% 2%;height: 100%;}
+.blok3{background-color:white;border: solid 2px black;height:100%;padding:5% 5% 5% 5%;}
+
+.ol_hoofd{color:#B1624F;font-size:40px;font-weight:900;background-color:inherit;margin-top:10%;}
+.contact{font-size: 25px;}
+.contact2, .nummer{font-size: 18px;}
+/*--//--CONTACT--------------------------------------------------------------------------------------------*/
+
+
+
+
 /*--VOLGORDE-------------------------------------------------------------------------------------*/
-/* ALGEMEEN > BASIS > INDEX > KUNST&DECORATIE
+/* ALGEMEEN > BASIS > INDEX > KUNST&DECORATIE > CONTACT
 
 /*--//VOLGORDE-----------------------------------------------------------------------------------*/
 

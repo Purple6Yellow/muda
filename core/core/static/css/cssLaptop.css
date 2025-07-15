@@ -60,9 +60,21 @@ iframe{width: 100%;height:400px;}
 
 .orde{background-color: inherit;} /* anders foto's door elkaar */
 /*//KUNST & DECORATIE-------laptop-----------------------------------------------------------------*/
+/*--  --CONTACT----------laptop----------------------------------------------------------------------------*/
+.blok1{background-color:#B1624F;height: 80%;width:80%;margin:2% 0 2% 10%;padding:3% 3% 3% 3%;;border: solid 2px black;}
+.blok2{background-color:white;padding:2% 2% 2% 2%;height: 100%;}
+.blok3{background-color:white;border: solid 2px black;height:100%;padding:2% 2% 2% 2%;}
+
+.ol_hoofd{color:#B1624F;font-size:40px;font-weight:900;background-color:inherit;margin-top:2%;}
+.contact{font-size: 25px;}
+.contact2, .nummer{font-size: 18px;}
+/*--//--CONTACT--------------------------------------------------------------------------------------------*/
+
+
+
 
 /*--VOLGORDE-------------------------------------------------------------------------------------*/
-/* ALGEMEEN > BASIS > KUNST & DECORATIE > 
+/* ALGEMEEN > BASIS > KUNST & DECORATIE > CONTACT
 
 /*--//VOLGORDE-----------------------------------------------------------------------------------*/
 
