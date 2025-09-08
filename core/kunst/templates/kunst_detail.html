@@ -3,20 +3,24 @@
 <!--head-->
 {% block styles %}
 <style>
-.bannerblock{display:none;}
+
+
+
+
 </style>
 {% endblock %}
 <!--//head-->
-<!-------------------------------------------------------------------------------------------BODY-->
+<!------------.bannerblock{display:none;}-------------------------------------------------------------------------------BODY-->
 <!----------SECTION----->
 {% block section11 %}
 <div class="geen_banner">
     <div class = "row">
-        <div class = "afbeeld"> <a href="/kunst.html"><img src="{{ kunst.afbeeld.url }}" alt="in construction"> </div>
-    </div>
-
-    <div class = "row">
-        <div class="afbeeld_txt">"{{ kunst.titel }}", ({{kunst.jaartal}}) , {{ kunst.materiaal }}, {{ kunst.formaat }} </div>
+        <div class = "col-6">
+            <div class = "afbeeld"> <a href="/kunst.html"><img src="{{ kunst.afbeeld.url }}" alt="in construction"> </div>
+        </div>
+        <div class = "col-6">
+            <div class="afbeeld_txt">"{{ kunst.titel }}", ({{kunst.jaartal}}) , {{ kunst.materiaal }}, {{ kunst.formaat }} </div>
+        </div>
     </div>
 </div>
 <!---->

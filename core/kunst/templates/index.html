@@ -3,13 +3,16 @@
 <!--head---->
 {% block styles %}
 <style>
-.tentoonstelling img{clip-path:inset(0 0 round 20px);margin:2% 0 0 0;}
 
-.flyerhome{padding: 2% 2% 2% 2%; background-color: inherit;margin:0 0 -2% 0;}
-.flyerhome img{width:70%; clip-path: inset(0 0 round 20px);float:right;}
+/*--ALGEMEEN TESTS--------------------------------------------------------------------*/
+.bannerblock{background-color:inherit;}
+.headertitel{background-color:inherit;}
+.headerblock{background-color:inherit;}
+.headertekst{background-color:inherit;}
+.tentoonstelling{background-color:inherit;}
+.flyerhome {background-color:inherit;}
 
-.flyerhome_txt{background-color:inherit;align-items: center; justify-content: center;padding:10% 5% 5% 0%;}
-
+/*--// ALGEMEEN TESTS--------------------------------------------------------------------*/
 
 
 
@@ -58,17 +61,12 @@
 <!----------SECTION----->
 {% block section3 %}
     <div class = "row"> 
-        <div class = "col-6 flyerhome_txt">
-            <div> " {{werk.titel}}  "</div>
-            <div>  </div>
-            <div>  </div>
-        </div>
-        <div class = "col-6 flyerhome">
-           <a href = "{% url 'werk' %}"> <img style="float:left" src = "{{ werk.afbeeld.url }}" alt="in construction"> </a>
+        <div class = "col-12 tentoonstelling">
+           <a href = "{% url 'werk' %}"> <img src = "{{ werk.afbeeld.url }}" alt="in construction"> </a>
         </div>
     </div>
 {% endblock %}
-<!-----//---SECTION----->
+<!-----//---SECTION----->   
 
 <!----------SECTION----->
 {% block section4 %}

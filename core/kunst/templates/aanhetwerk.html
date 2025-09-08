@@ -3,7 +3,9 @@
 <!--head-->
 {% block styles %}
 <style>
-    .body{background-color:green;}
+
+
+
 </style>
 {% endblock %}
 <!--//head-->
@@ -21,14 +23,13 @@
 <!---->
 <div class = "grid">
     {% for werk in werks %}
-    <div class = "afbeelding&titel">
+    <div class = "afbeeldingtitel">
         <div class = "vorm-rand">
             <div class = "vorm">
-                <a href="/aanhetwerk_detail.html/ {{ werk.pk }}"> <img src="{{ werk.afbeeld.url }}" alt="in construction"> </a>
+                <a href="/aanhetwerk_detail.html/{{ werk.pk }}"> <img src="{{ werk.afbeeld.url }}" alt="in construction"> </a>
                 <a href = "{% url 'WerkDetail' werk.pk %}" TARGET = "_blank" > <img scr = "{{ werk.afbeeld.url }}"> </a>
             </div>
         </div>
-        <div class ="vorm-titel"> {{ werk.titel }}</div>
     </div>
     {% endfor %}
 </div>

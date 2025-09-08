@@ -4,6 +4,7 @@
 {% block styles %}
 <style>
 
+
 </style>
 {% endblock %}
 <!--//head-->
@@ -22,7 +23,7 @@
 <!---->
 <div class = "grid">
     {% for decor in decors %}
-    <div class = "afbeelding&titel">
+    <div class = "afbeeldingtitel">
         <div class = "vorm-rand">
             <div class="vorm">
                 <a href="/decoratie_detail.html/{{ decor.pk }}"> <img src="{{ decor.afbeeld.url }}" alt="in construction"> </a>

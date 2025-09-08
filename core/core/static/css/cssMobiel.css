@@ -38,6 +38,7 @@ li{font-size:30px;}
 /*--DIVERS--*/
 
 .TxtCenter{text-align: center;}
+.TxtLeft{text-align:left;}
 .Margin{margin:3% 3% 3% 3%;}
 /*--*/
 .verbergenMob{display:none;}
@@ -52,10 +53,11 @@ li{font-size:30px;}
 /*--//DIVERS--*/
 /*--//ALGEMEEN -----------------------------------------------------------------------------------*/
 /*--BASIS-----------------------------------------------------------------------------------------*/
+.footerblock{margin:1% 1% 1% 1%;}
 .headerblock,.sectionblock0, .sectionblock1, .sectionblock2, .sectionblock3, 
 .sectionblock4,.sectionblock5, .sectionblock20, .footerblock{width:100%; height:100%;clip-path: inset(0% 0% round 20px);}
 .sectionblock0, .sectionblock1, .sectionblock2, .sectionblock3, .sectionblock4,.sectionblock5{margin-top:1%;}
-.bannerblock{height:40px;width:100%;position:absolute; top:0;clip-path: inset(0% 0% round 20px);}/*position moet gecombinaard met z-index menulogo*/
+.bannerblock{height:10%;width:99%;position:absolute; top:0;clip-path: inset(0% 0% round 20px);}/*position moet gecombinaard met z-index menulogo*/
 .bannerblock img{width:100%;height:100%;}
 .banner_txtblock{width:40%;
     position:relative; opacity: 50%; top:0px;transform:translate(140%,-200%);z-index:20;}
@@ -71,22 +73,45 @@ li{font-size:30px;}
 .menu-container img{width:10%;position:absolute;left:85%;top:3%;z-index:10} /*gelijke hoogte met #menu >> z-index ivm bannerblock*/ 
 #menu{background-color:inherit;}/*gelijke hoogte met menulogo*/
 /*---*/
-.logo_foot{padding: 0 0 0 0%;background-color:inherit;align-items:center;}
+.footer{padding: 5% 0 0 0;}
+.logo_foot{padding: 0% 0 0% 0%;background-color:inherit;align-items:center;}
 .logo_foot img{width:10%;margin:0% 5% 0% 5%;} /*logo footer */
 /*---*/
 li{list-style-type: none; text-align: center;padding: 10% 0 0% 0%;}
 a{ color:inherit; }
+
 /*---*/
 /*--//BASIS---------------------------------------------------------------------------------------*/
 
-/*-- INDEX ----------------------------------------------------------------------------------------*/
 
-/*--//INDEX---------------------------------------------------------------------------------------*/
-/*--KUNST & DECORATIE-------laptop-----------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-- INDEX -------mobiel---------------------------------------------------------------------------------*/
+.tentoonstelling img{clip-path:inset(0 0 round 20px);margin:2% 0 0 0;height: 80vw;}
+.flyerhome{padding: 2% 2% 2% 2%; background-color: inherit;margin:0 0 -2% 0;}
+.flyerhome img{width:70%; clip-path: inset(0 0 round 20px);height: 80vw;}
+.flyerhome_txt{background-color:inherit;align-items: center; justify-content: center;padding:10% 5% 5% 0%;}
+/*--//INDEX---------------------------------------------------------------------------------------------*/
+
+/*--KUNST & DECORATIE----------mobiel--------------------------------------------------------------*/
 .grid{display:grid !important; 
-    grid-template-columns: repeat(1, 1fr) !important; gap: 80px;background-color:inherit;}
+    grid-template-columns: repeat(1, 1fr) !important; gap: 1px;background-color:inherit;}
+.afbeeldingtitel{background-color:inherit;width:50%;margin:0 0 0 25%;}
 .vorm-rand{background-color: #c5a643; 
-    height: 300px;width:300px; 
+    height: 300px;width:300px;
     display: flex; align-items: center; justify-content: center;
     clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); margin: 5% 5% 5% 5%;}
 .vorm{height:290px; width:290px;
@@ -95,11 +120,46 @@ a{ color:inherit; }
 .vorm-titel{margin-top: 8px; font-weight: bold; text-align: center;}
 
 .orde{background-color: inherit;} /* anders foto's door elkaar */
-/*//KUNST & DECORATIE-------laptop-----------------------------------------------------------------*/
-/*----DETAIL-------laptop--------------------------------------------------------------------------*/
-.afbeeld, .afbeeld_txt{width:100%; background-color:inherit;padding-left:40%}
-.afbeeld img{height: 80vh;clip-path: inset(0 0 round 20px);}
-/*--//DETAIL-------laptop--------------------------------------------------------------------------*/
+/*//KUNST & DECORATIE------------------------------------------------------------------------*/
+
+/*----DETAIL-------mobiel-------------------------------------------------------------------------*/
+.afbeeld, .afbeeld_txt{width:90%; background-color:inherit;padding: 5% 0% 2% 0%;width: 80%;margin-left: 10%;}
+.afbeeld img{width:100%;clip-path: inset(0 0 round 20px);}
+/*--//DETAIL-------mobiel--------------------------------------------------------------------------*/
+
+
+/*--   --CV----------mobiel----------------------------------------------------------------------------*/
+.subtitel{font-size:50px;}
+.tekst{font-size:30px;text-align:left; background-color:inherit;}
+.deel_bovenste{font-size:50px;}
+.deel_onderste{font-size:20px;line-height: 1.5}
+
+.foto img{width:65%; clip-path: inset(0 0 round 20px);margin:15% 0% 0% 15%;}
+
+/*opmaak blokken*/
+.blok1{background-color:#B1624F;height: 100%;width:80%;margin-left:10%;padding:3% 3% 3% 3%;}
+.blok2{background-color:white;padding:2% 2% 2% 2%;height: 100%;}
+.blok3{background-color:white;border: solid 2px black;height:100%;}
+.blok4{font-size:20px; margin-top:5%    }
+
+.subtitel{background-color:inherit;}
+.deel_onderste{background-color:inherit;padding:0 0 0 10%;}
+.deel_onderste li{list-style-type: disc;padding:1% 1% 1% 1%;text-align:left;}
+
+.blokli{width:80%; margin: 1% 0% 2% 10%;
+    opacity: 80%; background-color:inherit;color:black; }
+.blokre{width:100%; margin:0% 0% 2% 0%;
+    color:black; background-color:inherit;text-align: center;} /*email blok */
+
+.deel_vervolg{width:80%; margin-left:10%;background-color:inherit;text-align:left;} /*titels deel 2 */
+.vaardigheden{text-align: center; font-size:30px; width: 80%; margin-left: 10%;background-color:inherit;}
+/*--// --CV----------mobiel----------------------------------------------------------------------------*/
+
+
+
+
+
+
 /*--  --CONTACT----------MOBIEL----------------------------------------------------------------------------*/
 .blok1{background-color:#B1624F;height: 80%;width:80%;margin:10% 0 10% 10%;padding:3% 3% 3% 3%;;border: solid 2px black;}
 .blok2{background-color:white;padding:2% 2% 2% 2%;height: 100%;}
@@ -108,6 +168,10 @@ a{ color:inherit; }
 .ol_hoofd{color:#B1624F;font-size:40px;font-weight:900;background-color:inherit;margin-top:10%;}
 .contact{font-size: 25px;}
 .contact2, .nummer{font-size: 18px;}
+
+.contact3_container{width:20%;background-color:inherit;margin: -10% 0 0 80%;}
+.contact3{width:100%; aspect-ratio:1/1;}
+.contact3 img{width:100%;aspect-ratio:1/1;clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
 /*--//--CONTACT--------------------------------------------------------------------------------------------*/
 
 

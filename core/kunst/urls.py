@@ -1,14 +1,18 @@
 from django.urls import path
-from .views import DetailKunst, DetailDecor,DetailWerk, cv, kunst, decor, werk, contact, index
+from .views import DetailKunst, DetailDecor,DetailWerk, cv, kunst, decor, werk, contact, index, expo
 # from .views import index, decor
 from django.conf import settings
 from django.conf.urls.static import static 
+
+
+
 
 urlpatterns = [
 
 ### -- ALGEMEEN -- ### 
     path('cv.html/', cv),
     path('contact.html/',contact),
+    path('expositie.html/', expo),
 ### // ALGEMEEN -- ### 
 ### -- DECORATIE -- ### 
     path('decoratie.html/', decor, name = 'decor'),
@@ -22,10 +26,11 @@ urlpatterns = [
     path('aanhetwerk.html/', werk, name = 'werk' ),
     path('aanhetwerk_detail.html/<int:pk>/', DetailWerk.as_view(), name = 'WerkDetail'),
 ### // WERK -- ### 
+
 ######---INDEX----############
     path('index.html/', index),
- 
- 
+
+
 ]
 
 if settings.DEBUG:

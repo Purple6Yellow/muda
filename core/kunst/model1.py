@@ -35,3 +35,30 @@ class Werk (models.Model):
     def __str__(self):
         return f"{self.titel} -- {self.created_by}"
 ### //WERK
+
+
+
+######################
+admin.py
+
+class VisitorDashboardAdmin(admin.ModelAdmin):
+    change_list_template = "admin/visitor_dashboard.html"
+
+    def changelist_view(self, request, extra_context=None):
+    # Hier kun je je eigen logica doen, bv. data uit de database halen
+        stats = {
+            "today": 123,
+            "this_week": 842,
+            "this_month": 3102,
+        }
+        context = {"stats": stats}
+        return TemplateResponse(request, "admin/visitor_dashboard.html", context)
+    
+class VisitorDashboard(models.Model):
+    class Meta:
+        managed = False  # geen tabel in DB ivm nep model 
+        verbose_name = "Bezoekers Dashboard"
+        verbose_name_plural = "Bezoekers Dashboard"
+        app_label = "kunst"   # <-- zet hier de naam van jouw app
+
+admin.site.register(VisitorDashboard, VisitorDashboardAdmin)

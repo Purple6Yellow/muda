@@ -1,0 +1,39 @@
+{% extends 'basis.html' %}
+{% load static %}
+<!--head-->
+{% block styles %}
+<style>
+
+
+</style>
+{% endblock %}
+<!--//head-->
+<!-----------------------------------------------------------------------------BODY----->
+
+<!----------HEADER----->
+{% block header %}
+<div class = "row">
+    <div class="headertitel"> Exposities </div>
+    <div class="headertekst"></div>
+</div>
+{% endblock header %}
+<!-----//---HEADER----->
+<!----------SECTION----->
+{% block section11 %}
+<!---->
+<div class = "">
+    {% for expo in expos %}
+    <div class = "vorm_rechthoek">
+        <div class = "kader">
+            <div class="">
+                <a href=""> <img src="{{ expo.afbeeld.url }}" alt="in construction"> </a>
+            </div>
+        </div>
+        <div class ="vorm-titel"> {{ expo.titel }}</div>
+    </div>
+    {% endfor %}
+</div>
+<!---->
+ {% endblock %}
+<!---->
+<!--//------SECTION----->
