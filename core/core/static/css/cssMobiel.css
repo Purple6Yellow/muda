@@ -1,9 +1,9 @@
-@media only screen and (min-device-width: 150px){
+@media only screen and (min-device-width: 300px){
 
 /*--ALGEMEEN -----------------------------------------------------------------------------------*/
 /*--KLEUREN--*/
 .sectionblock0{background-color:inherit;}
-.bannerblock{background-color:inherit;}
+.bannerblock{background-color:burlywood;}
 .headerblock{background-color:inherit;}
 .sectionblock1{background-color:#81836E}
 .sectionblock2{background-color:#B1624F;}
@@ -43,7 +43,7 @@ li{font-size:30px;}
 /*--*/
 .verbergenMob{display:none;}
 .verbergenLap{display:inline-block;}
-.row{display:inline-block;width:100%;background-color:inherit;} 
+.row{display:inline-block;width:100%;background-color:green;} 
 [class*="col-"]{display: inline-block;text-align: center;}
 .col-2,.col-3,.col-4,.col-6,.col-10,.col-12,.col-30,.col-40{width:100%;}
 /*--*/
@@ -84,21 +84,6 @@ a{ color:inherit; }
 /*--//BASIS---------------------------------------------------------------------------------------*/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*-- INDEX -------mobiel---------------------------------------------------------------------------------*/
 .tentoonstelling img{clip-path:inset(0 0 round 20px);margin:2% 0 0 0;height: 80vw;}
 .flyerhome{padding: 2% 2% 2% 2%; background-color: inherit;margin:0 0 -2% 0;}
@@ -109,12 +94,12 @@ a{ color:inherit; }
 /*--KUNST & DECORATIE----------mobiel--------------------------------------------------------------*/
 .grid{display:grid !important; 
     grid-template-columns: repeat(1, 1fr) !important; gap: 1px;background-color:inherit;}
-.afbeeldingtitel{background-color:inherit;width:50%;margin:0 0 0 25%;}
+.afbeeldingtitel{background-color:inherit;width:80%;margin:0 0 0 10%;padding:5% 5% 5% 5%;}
 .vorm-rand{background-color: #c5a643; 
-    height: 300px;width:300px;
+    width:300px; height:300px; margin: 0% 0% 0% 0%;
     display: flex; align-items: center; justify-content: center;
-    clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); margin: 5% 5% 5% 5%;}
-.vorm{height:290px; width:290px;
+    clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
+.vorm{width: 290px; height:290px;
     clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
 .vorm img{width:100%;}
 .vorm-titel{margin-top: 8px; font-weight: bold; text-align: center;}

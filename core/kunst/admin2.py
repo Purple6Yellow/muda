@@ -76,3 +76,11 @@ admin_site = MijnAdminSite(name = 'mijn_admin')
 ###BEZOEKERS_TELLER###
    
     path('admin/', admin_site.urls),
+
+
+###DECOR###
+@admin.register(Decor)
+class DecorAdmin(admin.ModelAdmin):
+    def get_queryset(self, request):
+        return super().get_queryset(request).filter("titel")
+###DECOR###

@@ -20,8 +20,9 @@ class KunstAdmin(admin.ModelAdmin):
 ###DECOR###
 @admin.register(Decor)
 class DecorAdmin(admin.ModelAdmin):
-    def get_queryset(self, request):
-        return super().get_queryset(request).filter("titel")
+    list_display = ( "titel","created_by", )
+    list_filter = ("titel",)
+    pass
 ###DECOR###
 
 ###WERK###

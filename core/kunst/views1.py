@@ -17,6 +17,7 @@ def contact(request):
 ### // ALGEMEEN -- ### 
 
 
+
 ### -- DECORATIE -- ### 
 def decor (request):
     print('request decor')

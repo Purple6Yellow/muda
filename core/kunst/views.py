@@ -22,16 +22,6 @@ def contact(request):
 ### // ALGEMEEN -- ### 
 
 
-### -- DECORATIE -- ### 
-def decor (request):
-    print('request decor')
-    #decors = Decor.objects.order_by('created_by').reverse
-    decors= Decor.objects.all()
-    print(decors)
-    print (Decor.objects.all())
-    return render(request,'decoratie.html', {'decors': decors})
-### // DECORATIE -- ### 
-
 ### -- AANHETWERK -- ### 
 class OverzichtWerk(ListView):
     model = Werk
@@ -66,20 +56,7 @@ def kunst(request):
 
 
 
-### -- DECOR -- ### 
-class OverzichtDecor(ListView):
-    model = Decor
 
-class DetailDecor(DetailView):
-    model = Decor
-    template_name = 'decoratie_detail.html'
-
-def decor(request):
-   # kunsts = Kunst.objects.all()
-    # kunsts = Kunst.objects.order_by('created_by').reverse
-    decors = Decor.objects.order_by('-created_by')
-    return render(request,'decoratie.html', {'decors': decors})
-### // DECOR -- ### 
 
  
 ### -- EXPOSITIE -- ### 
@@ -90,15 +67,7 @@ def expo(request):
     return render(request,'expositie.html', {'expos': expos})
 ### // EXPOSITIE -- ### 
 
-### -- DECORATIE -- ### 
-def decor (request):
-    print('request decor')
-    #decors = Decor.objects.order_by('created_by').reverse
-    decors= Decor.objects.all()
-    print(decors)
-    print (Decor.objects.all())
-    return render(request,'decoratie.html', {'decors': decors})
-### // DECORATIE -- ### 
+
 
 
 ## TELLER - AANTAL BEZOEKERS ##
@@ -118,12 +87,24 @@ def visitor_statistics(request):
 ## // TELLER - AANTAL BEZOEKERS ##
 
 
-  
+### -- DECOR -- ### 
+class OverzichtDecor(ListView):
+    model = Decor
+
+class DetailDecor(DetailView):
+    model = Decor
+    template_name = 'decoratie_detail.html'
+
+def decor(request):
+    # kunsts = Kunst.objects.all()
+    # kunsts = Kunst.objects.order_by('created_by').reverse
+    decors = Decor.objects.order_by('-created_by')
+    return render(request,'decoratie.html', {'decors': decors})
+### // DECOR -- ### 
 
 
  
 
 
-    
-    
+
 
