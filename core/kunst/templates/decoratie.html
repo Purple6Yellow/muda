@@ -4,7 +4,7 @@
 {% block styles %}
 <style>
 
-
+.footer{background-color:inherit;}
 </style>
 {% endblock %}
 <!--//head-->
@@ -24,12 +24,15 @@
 <div class = "grid">
     {% for decor in decors %}
     <div class = "afbeeldingtitel">
-        <div class = "vorm-rand">
-            <div class="vorm">
-                <a href="/decoratie_detail.html/{{ decor.pk }}"> <img src="{{ decor.afbeeld.url }}" alt="in construction"> </a>
-                <a href="{% url 'DecorDetail' decor.pk %}" TARGET = "_blank"> <img src="{{ decor.afbeeld.url }}" alt="in construction"> </a>
+        <div class = "afbeelding">
+            <div class = "vorm-rand">
+                <div class="vorm">
+                    <a href="/decoratie_detail.html/{{ decor.pk }}"> <img src="{{ decor.afbeeld.url }}" alt="in construction"> </a>
+                    <a href="{% url 'DecorDetail' decor.pk %}" TARGET = "_blank"> <img src="{{ decor.afbeeld.url }}" alt="in construction"> </a>
+                </div>
             </div>
         </div>
+        
         <div class ="vorm-titel"> {{ decor.titel }}</div>
     </div>
     {% endfor %}
