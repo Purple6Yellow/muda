@@ -3,7 +3,7 @@
 /*--ALGEMEEN -----------------------------------------------------------------------------------*/
 /*--KLEUREN--*/
 .sectionblock0{background-color:inherit;}
-.bannerblock{background-color:burlywood;}
+.bannerblock{background-color:inherit;}
 .headerblock{background-color:inherit;}
 .sectionblock1{background-color:#81836E}
 .sectionblock2{background-color:#B1624F;}
@@ -43,7 +43,7 @@ li{font-size:30px;}
 /*--*/
 .verbergenMob{display:none;}
 .verbergenLap{display:inline-block;}
-.row{display:inline-block;width:100%;background-color:green;} 
+.row{display:inline-block;width:100%;background-color:inherit;} 
 [class*="col-"]{display: inline-block;text-align: center;}
 .col-2,.col-3,.col-4,.col-6,.col-10,.col-12,.col-30,.col-40{width:100%;}
 /*--*/
@@ -57,7 +57,7 @@ li{font-size:30px;}
 .headerblock,.sectionblock0, .sectionblock1, .sectionblock2, .sectionblock3, 
 .sectionblock4,.sectionblock5, .sectionblock20, .footerblock{width:100%; height:100%;clip-path: inset(0% 0% round 20px);}
 .sectionblock0, .sectionblock1, .sectionblock2, .sectionblock3, .sectionblock4,.sectionblock5{margin-top:1%;}
-.bannerblock{height:10%;width:99%;position:absolute; top:0;clip-path: inset(0% 0% round 20px);}/*position moet gecombinaard met z-index menulogo*/
+.bannerblock{height:auto;width:100%;margin:0% 0 1% 0;position:absolute; top:0;clip-path: inset(0% 0% round 20px);}/*position moet gecombinaard met z-index menulogo*/
 .bannerblock img{width:100%;height:100%;}
 .banner_txtblock{width:40%;
     position:relative; opacity: 50%; top:0px;transform:translate(140%,-200%);z-index:20;}
@@ -91,15 +91,16 @@ a{ color:inherit; }
 .flyerhome_txt{background-color:inherit;align-items: center; justify-content: center;padding:10% 5% 5% 0%;}
 /*--//INDEX---------------------------------------------------------------------------------------------*/
 
-/*--KUNST & DECORATIE----------mobiel--------------------------------------------------------------*/
+/*--KUNST & DECORATIE----------mobiel-------    width:300px; height:300px; margin: 0% 0% 0% 0%;-----width: 290px; height:290px;--------------------------------------------------*/
 .grid{display:grid !important; 
     grid-template-columns: repeat(1, 1fr) !important; gap: 1px;background-color:inherit;}
 .afbeeldingtitel{background-color:inherit;width:80%;margin:0 0 0 10%;padding:5% 5% 5% 5%;}
 .vorm-rand{background-color: #c5a643; 
-    width:300px; height:300px; margin: 0% 0% 0% 0%;
-    display: flex; align-items: center; justify-content: center;
+    height:100%; aspect-ratio: 1/1;
+    display: flex; align-items: left; justify-content: center;
     clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
-.vorm{width: 290px; height:290px;
+.vorm{
+    height:96%; aspect-ratio: 1/1; margin:2% 0 0 0;
     clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
 .vorm img{width:100%;}
 .vorm-titel{margin-top: 8px; font-weight: bold; text-align: center;}
@@ -112,6 +113,11 @@ a{ color:inherit; }
 .afbeeld img{width:100%;clip-path: inset(0 0 round 20px);}
 /*--//DETAIL-------mobiel--------------------------------------------------------------------------*/
 
+/*----EXPO--------------------------------------------------------------------------------*/
+.vorm_rechthoek{width:100%;margin-left:0%;background-color:inherit;align-items: center;}
+.kader{width:60%;margin:2% 0 1% 20%;}
+.kader img{width: 100%;}
+/*--//EXPO------------------------------------------------------------------------------*/
 
 /*--   --CV----------mobiel----------------------------------------------------------------------------*/
 .subtitel{font-size:50px;}
@@ -146,15 +152,15 @@ a{ color:inherit; }
 
 
 /*--  --CONTACT----------MOBIEL----------------------------------------------------------------------------*/
-.blok1{background-color:#B1624F;height: 80%;width:80%;margin:10% 0 10% 10%;padding:3% 3% 3% 3%;;border: solid 2px black;}
+.blok1{background-color:#B1624F;height: 80%;width:90%;margin:10% 0 10% 5%;padding:3% 3% 3% 3%;;border: solid 2px black;}
 .blok2{background-color:white;padding:2% 2% 2% 2%;height: 100%;}
 .blok3{background-color:white;border: solid 2px black;height:100%;padding:5% 5% 5% 5%;}
 
-.ol_hoofd{color:#B1624F;font-size:40px;font-weight:900;background-color:inherit;margin-top:10%;}
-.contact{font-size: 25px;}
-.contact2, .nummer{font-size: 18px;}
+.ol_hoofd{color:#B1624F;font-size:35px;font-weight:900;background-color:inherit;margin-top:10%;}
+.contact{font-size: 20px;}
+.contact2, .nummer{font-size: 17px;}
 
-.contact3_container{width:20%;background-color:inherit;margin: -10% 0 0 80%;}
+.contact3_container{width:30%;background-color:inherit;margin: -0% 0 0 70%;}
 .contact3{width:100%; aspect-ratio:1/1;}
 .contact3 img{width:100%;aspect-ratio:1/1;clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
 /*--//--CONTACT--------------------------------------------------------------------------------------------*/

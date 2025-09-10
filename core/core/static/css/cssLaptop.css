@@ -34,10 +34,10 @@ iframe{width: 100%;height:400px;}
 /*--//ALGEMEEN -----------------------------------------------------------------------------------*/
 
 /*--BASIS-----------------------------------------------------------------------------------------*/
-.bannerblock{height:25%;width:99%;position:absolute; top:0;clip-path: inset(0% 0% round 20px);}/*position moet gecombinaard met z-index menulogo*/
+.bannerblock{height:25%;width:100%;position:absolute; top:0;clip-path: inset(0% 0% round 20px);}/*position moet gecombinaard met z-index menulogo*/
 .banner_txtblock{width:40%;
     position:relative; opacity: 50%; top:0px;transform:translate(140%,-200%);z-index:20;}
-.headerblock{margin:0% 0 0 0;}
+.headerblock{margin:1% 0 0 0;background-color:inherit;}
 /*--*/
 *{box-sizing: border-box;}
 /*menublock >> row >> menu-container >> menu >> */ /* menu-container >> ul >> li */
@@ -85,12 +85,11 @@ iframe{width: 100%;height:400px;}
 .afbeeld, .afbeeld_txt{width:90%; background-color:inherit;padding: 5% 0% 2% 15%;}
 .afbeeld img{height: 100vh; clip-path: inset(0 0 round 20px);}
 /*--//DETAIL-------laptop--------------------------------------------------------------------------*/
-
-/*----EXPO-------laptop-------------------------------------------------------------------------*/
+/*----EXPO--------------------------------------------------------------------------------*/
 .vorm_rechthoek{width:80%;margin-left:10%;background-color:inherit;align-items: center;}
 .kader{width:40%;margin:2% 0 1% 30%;}
 .kader img{width: 100%;}
-/*--//EXPO-------laptop-------------------------------------------------------------------------*/
+/*--//EXPO------------------------------------------------------------------------------*/
 
 /*--  --CV----------laptop----------------------------------------------------------------------------*/
 
