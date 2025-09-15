@@ -30,3 +30,27 @@ if (foto.src.includes("/img/atelier1.jpg")){
 //        foto.src = "img/atelier1.jpg";
 //   }
 //  })
+
+///
+
+
+const atelier1 = "{% static 'img/atelier1.jpg' %}";
+const atelier2 = "{% static 'img/atelier2.jpg' %}";
+
+document.getElementById("foto_contact").src = atelier1;
+console.log("contact pagina")
+
+foto.addEventListener('click', function(){
+    console.log("op foto geklikt")
+    if (foto.src.includes("atelier1.jpg")){
+        console.log("foto atelier1 wordt weergegeven")
+        //foto.src = atelier2;
+        //foto.src = foto.dataset.src;
+        foto.src = "{% static 'img/atelier2.jpg' %}";
+        //alert(foto.src)
+    }else{
+        console.log("foto atelier2 wordt weergegeven")
+        document.getElementById("foto_contact").src = atelier1;
+        //foto.src = "{% static 'img/atelier1.jpg' %}";
+       // alert(foto.src) }
+ }})
