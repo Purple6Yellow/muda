@@ -81,6 +81,18 @@
 <div class = "sectionblock20">{% block section20 %}  {% endblock %} </div> 
 <div class = "sectionblock21">{% block section21 %}  {% endblock %} </div>
 
+<!---->
+<div class = "scripts">
+<script src = "{% static 'js/eigenontwerp/menu.js' %}" type= "text/javascript"></script>  
+<script src = "{% static 'js/eigenontwerp/contact.js' %}" type= "text/javascript"></script> 
+{% block scripts %}{% endblock %} 
+
+<script>
+     
+</script> 
+</div>
+<!---->
+
 <div class = "footerblock">{% block footer %}
 
 <div class = "row footer">
@@ -99,14 +111,3 @@
 
 {% endblock %} </div>
 
-<!---->
-<div class = "scripts">
-<script src = "{% static 'js/eigenontwerp/menu.js' %}" type= "text/javascript"></script>  
-<script src = "{% static 'js/eigenontwerp/contact.js' %}" type= "text/javascript"></script> 
-{% block scripts %}{% endblock %} 
-
-<script>
-     
-</script> 
-</div>
-<!---->

@@ -4,6 +4,9 @@
 {% block styles %}
 <style>
 
+
+
+
 </style>
 {% endblock %}
 <!--// head-->
@@ -12,49 +15,40 @@
 {% block header %}
 <div class = "row">
     <div class="headertitel"> 
-        <div> Contact </div>
+        <div> Contact</div>
     </div>
 </div>
 {% endblock header %}
 <!-----//---HEADER----->
 <!----------SECTION1----->
+
 {% block section12 %}
 <div class = "row">
-    <div class="headertitel"> 
-        <div class = "blok1">
-            <div class = "blok2">
-                <div class = "blok3">
-                        <div>
-                            <div class = 'ol_hoofd'> Email: </div>
-                            <div class = "contact"> Marlousmuda@gmail.com</div>
-                        </div>
-
-                        <div>
-                            <div class = 'ol_hoofd'> Telefoonnummer: </div> 
-                            <div class = "nummer"> 06-20562385 </div>
-                        </div>
-                        
-                        <div>
-                            <div class = 'ol_hoofd'> Atelier: </div>  
-                            <div class = "contact"> Lepelstraat 9 </div>
-                            <div class = "contact2"> 2512 CW Den Haag</div>
-                        </div>
-
-                        <div class = "contact3_container">
-                           <div class = "contact3">
-                               <!--   <a href=""> <img id = "foto_contact" src="{% static 'img/atelier1.jpg' %}" alt="foto atelier"> </a>   
-                                 <img id = "foto_contact" src="img/atelier1.jpg" alt = "django">   --> 
-                               <img id = "foto_contact" src="{% static 'img/atelier1.jpg' %}" alt="foto atelier"> 
-                       
-                            </div>
-                        
-                     
-                </div>
-                 
+    <div class = "col-6 ">
+        <div class = "contact4">
+            <!--   <a href=""> <img id = "foto_contact" src="{% static 'img/atelier1.jpg' %}" alt="foto atelier"> </a>   
+                <img id = "foto_contact" src="img/atelier1.jpg" alt = "django">   --> 
+            <img id = "foto_contact1" src="{% static 'img/Ontwerp.jpg' %}" alt="foto atelier">    
+        </div>
+    </div>
+    <div class = "col-6">
+        <div class = "contact3_container">
+            <div class = "contact3">
+                <img id = "foto_contact" src="{% static 'img/atelier2.jpg' %}" alt="foto atelier">
+                <div class = 'ol_hoofd'> Email: </div>
+                <div class = "contact"> Marlousmuda@hotmail.com</div>
             </div>
+            <!--   <a href=""> <img id = "foto_contact" src="{% static 'img/atelier1.jpg' %}" alt="foto atelier"> </a>   
+            <img id = "foto_contact" src="img/atelier1.jpg" alt = "django">   --> 
+       
+
         </div>
     </div>
 </div>
 
 {% endblock %}
 <!-----//---SECTION----->
+
+
+
+

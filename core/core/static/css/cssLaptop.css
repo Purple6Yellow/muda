@@ -34,6 +34,7 @@ iframe{width: 100%;height:400px;}
 /*--//ALGEMEEN -----------------------------------------------------------------------------------*/
 
 /*--BASIS-----------------------------------------------------------------------------------------*/
+body{background-color:inherit;}
 .bannerblock{height:25%;width:100%;position:absolute; top:0;clip-path: inset(0% 0% round 20px);}/*position moet gecombinaard met z-index menulogo*/
 .banner_txtblock{width:40%;
     position:relative; opacity: 50%; top:0px;transform:translate(140%,-200%);z-index:20;}
@@ -47,7 +48,7 @@ iframe{width: 100%;height:400px;}
 .menu{background-color:inherit; padding: 1% 1% 5% 1%; margin: 0% 0% 1% 0%;z-index:10;}
 .menu_home{position: relative;transform: translate(0,0);}
 
-.footer{padding: 5% 0 0 0;}
+.footer{padding: 5% 0 0 0;margin-top:auto;}
 .logo_foot{padding: 0% 0 0 0%;background-color:inherit;align-items: center;}
 .logo_foot img{width:10%;margin:0% 5% 0% 5%;} /*logo footer */
 /*---*/
@@ -64,26 +65,30 @@ iframe{width: 100%;height:400px;}
 
 /*--//INDEX----------------------------------------------------------------------------------------------*/
 
+
 /*--KUNST & DECORATIE-------laptop-----------------------------------------------------------------*/
 .grid{display:grid !important; 
     grid-template-columns: repeat(4, 1fr) !important; gap:1%;background-color:inherit;} /* row-gap (ruimte tussen rijen) */
 .afbeeldingtitel{background-color:inherit;width:100%;margin:0 0 0 0%;}
-.afbeelding{background-color:inherit;height:auto;aspect-ratio:1/1; margin:0 0 0 0%;}
+.afbeelding{background-color:inherit;height:auto;aspect-ratio:1/1; margin:1% 0 0% 0%;}
 .vorm-rand{background-color: #c5a643; 
     height:100%; aspect-ratio: 1/1;
-    display: flex; align-items: center; justify-content: center;
+    display: flex; align-items: left; justify-content: center;
     clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
 .vorm{height:96%; aspect-ratio: 1/1;
     clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
-.vorm img{width:100%;}
+.vorm img{width:100%;height:100%; object-fit:cover;}
 .vorm-titel{margin-top: 8px; font-weight: bold; text-align: center;width:100%; background-color:inherit;}
 
 .orde{background-color: inherit;} /* anders foto's door elkaar */
 /*//KUNST & DECORATIE-------laptop----------    height:250px;width:250px; -------------------------------------------------------*/
 
+
+
+
 /*----DETAIL-------laptop-------------------------------------------------------------------------*/
 .afbeeld, .afbeeld_txt{width:90%; background-color:inherit;padding: 5% 0% 2% 15%;}
-.afbeeld img{height: 100vh; clip-path: inset(0 0 round 20px);}
+.afbeeld img{height: 100%; clip-path: inset(0 0 round 20px);}
 /*--//DETAIL-------laptop--------------------------------------------------------------------------*/
 /*----EXPO--------------------------------------------------------------------------------*/
 .vorm_rechthoek{width:80%;margin-left:10%;background-color:inherit;align-items: center;}
@@ -110,9 +115,13 @@ iframe{width: 100%;height:400px;}
 .ol_hoofd{color:#B1624F;font-size:40px;font-weight:900;background-color:inherit;margin-top:2%;}
 .contact{font-size: 25px;}
 .contact2, .nummer{font-size: 18px;}
+
+/*--*/
+.contact3_container{width:100%;background-color:inherit;margin: -10% 0 0 0%;}
+.contact3{width:30%; aspect-ratio:1/1;margin:-10% 0 0 40%;background-color:inherit;}
+.contact4{width: 80%; padding:0% 5% 5% 20%;background-color:inherit;}
+.contact4 img{width:100%;}
 /*--//--CONTACT--------------------------------------------------------------------------------------------*/
-
-
 
 
 /*--VOLGORDE-------------------------------------------------------------------------------------*/
